@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Battleground</title>
+    
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #2b2b2b;
+            color: #00ff66;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00ff66;
+        }
+        nav a {
+            color: #00ff66;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        
+        /* Main Layout */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #222222;
+            border-radius: 10px;
+        }
+        
+        /* Section Headings & Articles */
+        section h2 {
+            color: #ff4500;
+            border-bottom: 2px solid #ff4500;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        article {
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Section (Images ke liye corrected CSS) */
+        #gallery {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            margin-top: 20px;
+        }
+        /* Image ka size aur display set karna */
+        .image-container img { 
+            width: 30%; 
+            height: 200px; 
+            object-fit: cover; 
+            border: 3px solid #ff4500;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: block; 
+        }
+
+        /* Trailer Button ka design */
+        .trailer-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #ff4500; 
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .trailer-button:hover {
+            background-color: #ff6347;
+        }
+        
+        /* Comment Button ka design */
+        .comment-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #ff4500; /* Same as trailer button for consistency */
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .comment-button:hover {
+            background-color: #ff6347;
+        }
+
+        /* Community Section ka design */
+        #community {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #2b2b2b; 
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Community Button ka design */
+        .community-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #00ff66; 
+            color: #1a1a1a; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px; 
+            transition: background-color 0.3s;
+        }
+
+        .community-button:hover {
+            background-color: #ffffff;
+            color: #00ff66;
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2b2b2b;
+            color: #888888;
+            margin-top: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <h1>⚔️ AS BATTLEGROUND ⚔️</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#video-trailer">Videos</a> 
+            <a href="#guides">Guides</a>
+            <a href="#comments">Comments</a> 
+            <a href="#community">Community</a> 
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="home">
+            <h2>🔥 Welcome to the Battleground! 🔥</h2>
+            <p>Sabse naye game reviews, hacks, aur community discussion yahan milenge.</p>
+        </section>
+
+        <section id="news">
+            <h2>⚡ Latest Gaming News ⚡</h2>
+            <article>
+                <h3>Free Fire Ka Naya Season Out!</h3>
+                <p>Naye maps aur characters ke baare mein jaaniye...</p>
+            </article>
+        </section>
+        
+        <section id="gallery">
+            <h2>📸 Trending Game Gallery 📸</h2>
+            <div class="image-container">
+                <img src="valorant.jpg" alt="Valorant Game Image">
+                <img src="minecraft.jpg" alt="Minecraft Game Image">
+                <img src="bgmi.jpg" alt="BGMI Game Image">
+            </div>
+            <p>Check out the best visuals from today's top games!</p>
+        </section>
+        
+        <section id="video-trailer">
+            <h2>🎥 New Game Trailer 🎥</h2>
+            <p>Don't miss the trailer for the next big AAA title!</p>
+            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
+                WATCH TRAILER ON YOUTUBE 🚀
+            </a>
+        </section>
+
+        <section id="guides">
+            <h2>🏆 Pro Player Guides 🏆</h2>
+            <p>Har game mein master banne ke liye yahan seekhein.</p>
+        </section>
+
+        <section id="comments">
+            <h2>📢 Leave Your Comment 📢</h2>
+            <p>Tell us what you think about the latest news and guides!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfB8Y0m2Z-hG2Z-jK3D5X0I5W0vN7q2x_o1Lq8A7w/viewform" target="_blank" class="comment-button">
+                COMMENT FORM KHOLEIN 💬
+            </a>
+        </section>
+        
+        <section id="community">
+            <h2>🤝 Join Our Community 🤝</h2>
+            <p>Baaki gamers se judne aur exclusive tips paane ke liye turant join karein!</p>
+            <a href="https://discord.gg/" target="_blank" class="community-button">
+                DISCORD SERVER JOIN KAREIN 💬
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AS Battleground. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
