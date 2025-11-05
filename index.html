@@ -24,7 +24,7 @@
             border-bottom: 3px solid #00ff66;
         }
         
-        /* UPDATED NAVIGATION STYLE */
+        /* NAVIGATION STYLE */
         nav a {
             color: #ffffff;
             text-decoration: none;
@@ -48,13 +48,12 @@
             border-color: #ff4500;
         }
 
-        /* SEARCH BAR STYLING (FIXED AND IMPROVED) */
+        /* SEARCH BAR STYLING */
         .search-container {
             text-align: center;
             padding: 15px 0;
             background-color: #333333;
             border-bottom: 2px solid #ff4500;
-            /* Extra margin to separate from header */
             margin-bottom: 0px; 
         }
         .search-input {
@@ -82,7 +81,6 @@
         .search-button:hover {
             background-color: #e03b00;
         }
-        /* End Search Bar Styling */
         
         /* Main Layout */
         main {
@@ -107,35 +105,84 @@
             margin-bottom: 15px;
         }
 
-        /* Gallery Section */
-        #gallery {
-            text-align: center;
-            padding: 30px 0;
-        }
-        .image-container {
-            display: flex;
-            justify-content: space-around; 
-            flex-wrap: wrap; 
-            margin-top: 20px;
-        }
-        .image-container a {
-             width: 30%; 
-             margin-bottom: 15px;
-             display: block;
-        }
-        .image-container img { 
-            width: 100%;
-            height: 200px; 
-            object-fit: cover; 
-            border: 3px solid #ff4500;
+        /* SLIDESHOW CSS START */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            border: 5px solid #ff4500;
             border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .image-container img:hover {
-            transform: scale(1.05);
+            overflow: hidden;
         }
 
-        /* Button ka design (Trailer, Comment) */
+        .mySlides {
+            display: none; /* Initially hide all slides */
+            width: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 400px; /* Fixed height for better look */
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background with a little opacity */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #ffffff;
+            font-size: 18px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0,0,0,0.6);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        /* SLIDESHOW CSS END */
+
+
+        /* Other Button Styling */
         .trailer-button, .comment-button {
             display: inline-block;
             padding: 15px 30px;
@@ -233,29 +280,36 @@
         </section>
         
         <section id="gallery">
-            <h2>📸 Trending Game Gallery (CLICK TO PLAY!) 📸</h2>
-            <div class="image-container">
-                <a href="https://playvalorant.com/" target="_blank">
-                    <img src="valorant.jpg" alt="Valorant Game Link">
-                </a>
-                <a href="https://www.minecraft.net/" target="_blank">
-                    <img src="minecraft.jpg" alt="Minecraft Game Link">
-                </a>
-                <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
-                    <img src="bgmi.jpg" alt="BGMI Game Link">
-                </a>
-                
-                <a href="https://www.rockstargames.com/gta-v" target="_blank">
-                    <img src="gta.jpg" alt="GTA V Game Link">
-                </a>
-                <a href="https://www.ea.com/games/ea-sports-fc" target="_blank">
-                    <img src="fifa.jpg" alt="EA Sports FC Link">
-                </a>
-                <a href="https://www.fortnite.com/" target="_blank">
-                    <img src="fortnite.jpg" alt="Fortnite Game Link">
-                </a>
+            <h2>📸 Trending Game Gallery (SLIDESHOW) 📸</h2>
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <a href="https://playvalorant.com/" target="_blank">
+                        <img src="valorant.jpg" alt="Valorant Game Link">
+                    </a>
+                    <div class="text">VALORANT: The Tactical Shooter</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="https://www.minecraft.net/" target="_blank">
+                        <img src="minecraft.jpg" alt="Minecraft Game Link">
+                    </a>
+                    <div class="text">MINECRAFT: Build and Explore</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
+                        <img src="bgmi.jpg" alt="BGMI Game Link">
+                    </a>
+                    <div class="text">BGMI: India's Favorite Battle Royale</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <p>Check out the best visuals from today's top games!</p>
+            <br>
+            <p>Swipe through the visuals from today's top games! (Note: GTA, FIFA, Fortnite images ko slideshow mein include nahi kiya gaya hai.)</p>
         </section>
         
         <section id="video-trailer">
@@ -324,6 +378,26 @@
     <footer>
         <p>&copy; 2025 AS Battleground. All rights reserved.</p>
     </footer>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-</body>
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+    </body>
 </html>
