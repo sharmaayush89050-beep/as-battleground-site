@@ -133,83 +133,6 @@
             margin-bottom: 15px;
         }
 
-        /* SLIDESHOW CSS */
-        .slideshow-container {
-            max-width: 800px;
-            position: relative;
-            margin: auto;
-            border: 5px solid #00FFFF; 
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .mySlides {
-            display: none; 
-            width: 100%;
-        }
-
-        .mySlides img {
-            width: 100%;
-            height: 400px; 
-            object-fit: cover;
-            vertical-align: middle;
-        }
-
-        /* Next & previous buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background with a little opacity */
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        /* Caption text */
-        .text {
-            color: #ffffff;
-            font-size: 18px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(0,0,0,0.6);
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
-        /* SLIDESHOW CSS END */
-
-
         /* Trailer and Comment Button Styling */
         .trailer-button {
             display: inline-block;
@@ -258,13 +181,23 @@
              font-weight: bold;
         }
 
-        /* EXTRA GALLERY IMAGES STYLING */
-        .extra-gallery-images img {
-            border-radius: 5px;
-            transition: transform 0.3s ease;
+        /* ALL GALLERY IMAGES STYLING */
+        .full-gallery-images {
+            text-align: center;
+            margin-top: 20px;
         }
-        .extra-gallery-images img:hover {
+        .full-gallery-images img {
+            width: 30%; /* Teen images ek line mein */
+            max-width: 250px;
+            height: auto;
+            margin: 1%;
+            border-radius: 5px;
+            border: 3px solid #111A2E;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .full-gallery-images img:hover {
             transform: scale(1.05);
+            border-color: #00FFFF;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
 
@@ -356,42 +289,21 @@
         </section>
         
         <section id="gallery">
-            <h2>📸 Trending Game Gallery (SLIDESHOW) 📸</h2>
+            <h2>📸 Top Games Gallery 📸</h2>
             
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <a href="https://playvalorant.com/" target="_blank">
-                        <img src="valorant.jpg" alt="Valorant Game Link">
-                    </a>
-                    <div class="text">VALORANT: The Tactical Shooter</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <a href="https://www.minecraft.net/" target="_blank">
-                        <img src="minecraft.jpg" alt="Minecraft Game Link">
-                    </a>
-                    <div class="text">MINECRAFT: Build and Explore</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
-                        <img src="bgmi.jpg" alt="BGMI Game Link">
-                    </a>
-                    <div class="text">BGMI: India's Favorite Battle Royale</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-            <p>Swipe through the visuals from today's top games! Extra game images neeche dekhein.</p>
+            <p>India ke sabse trending games ki gallery yahaan dekhein:</p>
             
-            <div class="extra-gallery-images" style="text-align: center; margin-top: 20px;">
-                <a href="#"><img src="fifa.jpg" alt="FIFA Game" style="width: 30%; margin: 1%;"></a>
-                <a href="#"><img src="fortnite.jpg" alt="Fortnite Game" style="width: 30%; margin: 1%;"></a>
-                <a href="#"><img src="gta.jpg" alt="GTA Game" style="width: 30%; margin: 1%;"></a>
+            <div class="full-gallery-images">
+                <a href="#"><img src="bgmi.jpg" alt="BGMI Game"></a>
+                <a href="#"><img src="valorant.jpg" alt="Valorant Game"></a>
+                <a href="#"><img src="minecraft.jpg" alt="Minecraft Game"></a>
+                
+                <a href="#"><img src="gta.jpg" alt="GTA Game"></a>
+                <a href="#"><img src="fifa.jpg" alt="FIFA Game"></a>
+                <a href="#"><img src="fortnite.jpg" alt="Fortnite Game"></a>
             </div>
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #8892B0;">(Note: Sabhi images ek hi folder mein honi chahiye.)</p>
         </section>
         
         <section id="video-trailer">
