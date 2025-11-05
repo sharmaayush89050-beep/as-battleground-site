@@ -36,4 +36,4 @@ function performSearch() {
     }
 }
 
-// Slideshow ka code yahaan se hata diya gaya hai.
+// Slideshow ka code hata diya gaya hai.
