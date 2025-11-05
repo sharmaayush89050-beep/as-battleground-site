@@ -57,7 +57,7 @@
             margin-bottom: 15px;
         }
 
-        /* Gallery Section (Images ke liye corrected CSS) */
+        /* Gallery Section */
         #gallery {
             text-align: center;
             padding: 30px 0;
@@ -68,7 +68,6 @@
             flex-wrap: wrap; 
             margin-top: 20px;
         }
-        /* Image ka size aur display set karna */
         .image-container img { 
             width: 30%; 
             height: 200px; 
@@ -79,8 +78,8 @@
             display: block; 
         }
 
-        /* Trailer Button ka design */
-        .trailer-button {
+        /* Button ka design (Trailer, Comment) */
+        .trailer-button, .comment-button {
             display: inline-block;
             padding: 15px 30px;
             margin-top: 20px;
@@ -93,27 +92,10 @@
             transition: background-color 0.3s;
         }
 
-        .trailer-button:hover {
+        .trailer-button:hover, .comment-button:hover {
             background-color: #ff6347;
         }
         
-        /* Comment Button ka design */
-        .comment-button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 20px;
-            background-color: #ff4500; /* Same as trailer button for consistency */
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .comment-button:hover {
-            background-color: #ff6347;
-        }
-
         /* Community Section ka design */
         #community {
             text-align: center;
@@ -164,6 +146,7 @@
             <a href="#gallery">Gallery</a>
             <a href="#video-trailer">Videos</a> 
             <a href="#guides">Guides</a>
+            <a href="#upcoming">Upcoming</a> 
             <a href="#comments">Comments</a> 
             <a href="#community">Community</a> 
         </nav>
@@ -206,7 +189,22 @@
             <h2>🏆 Pro Player Guides 🏆</h2>
             <p>Har game mein master banne ke liye yahan seekhein.</p>
         </section>
+        
+        <section id="upcoming">
+            <h2>🔮 Upcoming Games 🔮</h2>
+            
+            <article>
+                <h3>Call of Duty: Black Ops Next</h3>
+                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
+            </article>
 
+            <article>
+                <h3>GTA VI: Official Release</h3>
+                <p>Hum sab ka intezaar khatam hone wala hai! Latest leaks ke mutabik, Vice City ka naya avatar February 2027 mein aayega.</p>
+            </article>
+            
+        </section>
+        
         <section id="comments">
             <h2>📢 Leave Your Comment 📢</h2>
             <p>Tell us what you think about the latest news and guides!</p>
@@ -230,4 +228,4 @@
     </footer>
 
 </body>
-</html>
+</html>        
