@@ -164,7 +164,7 @@
             background-color: #FFD700; 
         }
 
-        /* NEW CONTACT FORM STYLING */
+        /* CONTACT FORM STYLING */
         #contact-us h2 {
             border-bottom: 2px solid #FFD700; 
             color: #FFD700;
@@ -239,4 +239,205 @@
 
         .community-button:hover {
             background-color: #00FFFF; 
-            color: #1A25
+            color: #1A253C;
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1A253C;
+            color: #8892B0;
+            margin-top: 40px;
+        }
+        
+        /* Social Media Icons Styling */
+        .social-icons a {
+            font-size: 1.8em; /* Icon size */
+            margin: 0 12px;
+            color: #E0E7FF; /* Default color */
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #00FFFF; /* Hover effect (Cyan) */
+            text-decoration: none;
+        }
+
+        /* NEW: Footer Contact Details Styling */
+        .contact-details a {
+            color: #8892B0; /* Light grey text color */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        .contact-details a:hover {
+            color: #FFD700; /* Gold/Yellow on hover */
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <img src="as-battleground-logo.png" alt="AS Battleground Logo" class="website-logo">
+        <p class="slogan-text">YOUR ULTIMATE GAMING SOURCE</p>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#news">NEWS</a>
+            <a href="#upcoming">UPCOMING</a>
+            <a href="#gallery">GALLERY</a>
+            
+            <a href="#video-trailer">VIDEOS</a> 
+            <a href="#guides">GUIDES</a>
+            <a href="#schedule">SCHEDULE</a> 
+            
+            <a href="#contact-us">CONTACT</a> 
+            <a href="#community">COMMUNITY</a> 
+        </nav>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input" id="searchInput"> 
+        <button class="search-button" onclick="performSearch()">SEARCH</button> 
+    </div>
+    <main>
+        
+        <section id="home">
+            <h2>🔥 Welcome to the Battleground! 🔥</h2>
+            <p>Sabse naye game reviews, hacks, aur community discussion yahan milenge.</p>
+        </section>
+        
+        <section id="ad-banner">
+            <a href="#" target="_blank" style="text-decoration: none;">
+                <h3>AD SPOT: YOUR SPONSORSHIP HERE</h3>
+                <p>(Click to see our latest Gaming Gear deal!)</p>
+            </a>
+        </section>
+        <section id="news">
+            <h2>⚡ Latest Gaming News ⚡</h2>
+            <article>
+                <h3>Free Fire Ka Naya Season Out!</h3>
+                <p>Naye maps aur characters ke baare mein jaaniye...</p>
+            </article>
+        </section>
+        
+        <section id="gallery">
+            <h2>📸 Top Games Gallery 📸</h2>
+            
+            <p>India ke sabse trending games ki gallery yahaan dekhein (Click to Play/Download):</p>
+            
+            <div class="full-gallery-images">
+                <a href="https://www.battlegroundsmobileindia.com/" target="_blank"><img src="bgmi.jpg" alt="BGMI Game"></a>
+                
+                <a href="https://playvalorant.com/en-us/" target="_blank"><img src="valorant.jpg" alt="Valorant Game"></a>
+                
+                <a href="https://www.minecraft.net/en-us" target="_blank"><img src="minecraft.jpg" alt="Minecraft Game"></a>
+                
+                <a href="https://www.rockstargames.com/gta-v" target="_blank"><img src="gta.jpg" alt="GTA Game"></a>
+                
+                <a href="https://www.ea.com/games/ea-sports-fc/fc-24" target="_blank"><img src="fifa.jpg" alt="FIFA Game"></a>
+                
+                <a href="https://www.fortnite.com/" target="_blank"><img src="fortnite.jpg" alt="Fortnite Game"></a>
+            </div>
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #8892B0;">(Note: Sabhi images ek hi folder mein honi chahiye.)</p>
+        </section>
+        
+        <section id="video-trailer">
+            <h2>🎥 New Game Trailer 🎥</h2>
+            <p>Don't miss the trailer for the next big AAA title!</p>
+            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
+                WATCH TRAILER ON YOUTUBE 🚀
+            </a>
+        </section>
+
+        <section id="guides">
+            <h2>🏆 Pro Player Guides 🏆</h2>
+            <p>Har game mein master banne ke liye yahan seekhein.</p>
+        </section>
+        
+        <section id="upcoming">
+            <h2>🔮 Upcoming Games 🔮</h2>
+            
+            <article>
+                <h3>Call of Duty: Black Ops Next</h3>
+                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
+            </article>
+
+            <article>
+                <h3>GTA VI: Official Release</h3>
+                <p>Hum sab ka intezaar khatam hone wala hai! Latest leaks ke mutabik, Vice City ka naya avatar February 2027 mein aayega.</p>
+            </article>
+            
+        </section>
+
+        <section id="schedule">
+            <h2>🗓️ Tournament Schedule 🗓️</h2>
+            
+            <article>
+                <h3>BGMI Winter Clash (Solo)</h3>
+                <p><strong>Date:</strong> 15th Nov 2025 | <strong>Time:</strong> 7:00 PM IST</p>
+                <p>Registration is now open! Check community tab for rules.</p>
+            </article>
+
+            <article>
+                <h3>Valorant Asia Regional Finals</h3>
+                <p><strong>Date:</strong> 22nd Nov 2025 | <strong>Time:</strong> 4:30 PM IST</p>
+                <p>Watch the live stream link on our Videos section!</p>
+            </article>
+            
+        </section>
+        
+        <section id="contact-us">
+            <h2>📧 Contact Us Directly 📧</h2>
+            <p>Humein kisi bhi sawaal, feedback ya partnership ke liye likhein! Hum aapko jald hi reply karenge.</p>
+            
+            <div class="contact-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjm2zfKXM1ER16BL5GuNMnCqHVl-cJQ6BCtX_OA9_izL5G_w/viewform?embedded=true" 
+                    width="100%" 
+                    height="700" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    title="AS Battleground Contact Form">
+                    Loading…
+                </iframe>
+            </div>
+            </section>
+        
+        <section id="community">
+            <h2>🤝 Join Our Community 🤝</h2>
+            <p>Baaki gamers se judne aur exclusive tips paane ke liye turant join karein!</p>
+            <a href="https://discord.gg/" target="_blank" class="community-button">
+                DISCORD SERVER JOIN KAREIN 💬
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-icons" style="margin-bottom: 10px;">
+            <a href="https://discord.gg/" target="_blank" aria-label="Join Discord"><i class="fab fa-discord"></i></a>
+            
+            <a href="https://www.youtube.com/" target="_blank" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+            
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="contact-details">
+            <a href="mailto:support@asbattleground.com">Email: support@asbattleground.com</a>
+            |
+            <a href="tel:+919876543210">Call: +91-9876543210</a>
+        </div>
+        
+        <p>&copy; 2025 AS Battleground. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+
+</body>
+    </html>
