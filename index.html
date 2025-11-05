@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+                    <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -24,21 +25,29 @@
             border-bottom: 3px solid #00ff66;
         }
         
-        /* UPDATED NAVIGATION STYLE FOR BETTER LOOK AND SPACE */
+        /* UPDATED NAVIGATION STYLE FOR BEST LOOK */
         nav a {
-            color: #00ff66;
+            color: #ffffff; /* White text color */
             text-decoration: none;
-            padding: 8px 15px;
-            margin: 0 5px;
-            font-weight: bold;
-            border-radius: 5px; 
-            transition: background-color 0.3s, color 0.3s;
+            padding: 8px 12px; 
+            margin: 0 4px;
+            font-weight: 700; /* Zyada bold */
+            text-transform: uppercase; /* Sabhi text ko capital letters mein kiya */
+            border-radius: 2px; /* Thoda sharp look */
+            border: 1px solid transparent; /* Border for transition */
+            transition: color 0.3s, border-color 0.3s;
             display: inline-block; 
-            font-size: 0.9em; /* Font size thoda chota kiya for fitting */
+            font-size: 0.85em;
         }
         nav a:hover {
-            color: #1a1a1a;
-            background-color: #00ff66;
+            color: #00ff66; /* Hover par neon green text */
+            border-color: #00ff66; /* Border bhi green ho jayegi */
+            background-color: transparent; /* No background color on hover */
+        }
+        /* Highlight for the current page (Home) */
+        nav a[href="#home"] {
+            color: #ff4500; /* Home ko striking red color diya */
+            border-color: #ff4500;
         }
         
         /* Main Layout */
@@ -77,12 +86,12 @@
         }
         /* Style for the linked images */
         .image-container a {
-             width: 30%; /* Teen images ek row mein */
+             width: 30%; 
              margin-bottom: 15px;
              display: block;
         }
         .image-container img { 
-            width: 100%; /* Link ke andar ki image puri jagah le */
+            width: 100%;
             height: 200px; 
             object-fit: cover; 
             border: 3px solid #ff4500;
@@ -90,7 +99,7 @@
             transition: transform 0.3s;
         }
         .image-container img:hover {
-            transform: scale(1.05); /* Hover effect */
+            transform: scale(1.05);
         }
 
 
@@ -280,4 +289,4 @@
     </footer>
 
 </body>
-                                           </html>
+</html>                       </html>
