@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -75,15 +75,24 @@
             flex-wrap: wrap; 
             margin-top: 20px;
         }
+        /* Style for the linked images */
+        .image-container a {
+             width: 30%; /* Teen images ek row mein */
+             margin-bottom: 15px;
+             display: block;
+        }
         .image-container img { 
-            width: 30%; 
+            width: 100%; /* Link ke andar ki image puri jagah le */
             height: 200px; 
             object-fit: cover; 
             border: 3px solid #ff4500;
             border-radius: 8px;
-            margin-bottom: 15px;
-            display: block; 
+            transition: transform 0.3s;
         }
+        .image-container img:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+
 
         /* Button ka design (Trailer, Comment) */
         .trailer-button, .comment-button {
@@ -177,11 +186,27 @@
         </section>
         
         <section id="gallery">
-            <h2>📸 Trending Game Gallery 📸</h2>
+            <h2>📸 Trending Game Gallery (CLICK TO PLAY!) 📸</h2>
             <div class="image-container">
-                <img src="valorant.jpg" alt="Valorant Game Image">
-                <img src="minecraft.jpg" alt="Minecraft Game Image">
-                <img src="bgmi.jpg" alt="BGMI Game Image">
+                <a href="https://playvalorant.com/" target="_blank">
+                    <img src="valorant.jpg" alt="Valorant Game Link">
+                </a>
+                <a href="https://www.minecraft.net/" target="_blank">
+                    <img src="minecraft.jpg" alt="Minecraft Game Link">
+                </a>
+                <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
+                    <img src="bgmi.jpg" alt="BGMI Game Link">
+                </a>
+                
+                <a href="https://www.rockstargames.com/gta-v" target="_blank">
+                    <img src="gta.jpg" alt="GTA V Game Link">
+                </a>
+                <a href="https://www.ea.com/games/ea-sports-fc" target="_blank">
+                    <img src="fifa.jpg" alt="EA Sports FC Link">
+                </a>
+                <a href="https://www.fortnite.com/" target="_blank">
+                    <img src="fortnite.jpg" alt="Fortnite Game Link">
+                </a>
             </div>
             <p>Check out the best visuals from today's top games!</p>
         </section>
