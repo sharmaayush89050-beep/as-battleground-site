@@ -1,24 +1,43 @@
-// Function to handle the search action
+// Function to handle the search action (Real Filter Feature)
 function performSearch() {
-    // 1. Input field ki value (text) lein
-    let searchText = document.getElementById('searchInput').value;
-    
-    // 2. Value ko chota (lowercase) karein taaki search aasan ho
-    searchText = searchText.toLowerCase().trim();
+    let searchText = document.getElementById('searchInput').value.toLowerCase().trim();
+    let articles = document.getElementsByTagName('article');
+    let found = false;
 
-    // 3. Check karein ki user ne kuch likha hai ya nahi
     if (searchText === "") {
-        alert("Kripya search karne ke liye kuch likhein!");
-        return; // Function ko yahin rok do
+        // Agar search bar khaali hai, toh saare articles dikhayein
+        for (let i = 0; i < articles.length; i++) {
+            articles[i].style.display = 'block';
+        }
+        return;
     }
 
-    // 4. Ek simple message dikhayein
-    alert("Aapne search kiya: '" + searchText + "'. Abhi hum yeh feature develop kar rahe hain!");
-    
-    // Yahaan par hum future mein real search functionality ka code jodenge.
+    // Har Article ko check karein
+    for (let i = 0; i < articles.length; i++) {
+        let article = articles[i];
+        
+        // Article ka poora text lein aur chota (lowercase) karein
+        let articleText = article.innerText.toLowerCase();
+
+        // Check karein ki search text article mein hai ya nahi
+        if (articleText.includes(searchText)) {
+            // Agar milta hai toh dikhayein (unhide)
+            article.style.display = 'block';
+            found = true;
+        } else {
+            // Agar nahi milta hai toh chhipa dein (hide)
+            article.style.display = 'none';
+        }
+    }
+
+    // Agar kuch nahi mila toh user ko batayein
+    if (!found) {
+        alert("Maaf kijiye, '" + searchText + "' se related koi article nahi mila. Search bar ko khaali karke dobara SEARCH dabayein.");
+    }
 }
 
-// Existing Slideshow Code (Isko bhi yahi rakhein)
+
+// Slideshow Code 
 let slideIndex = 1;
 showSlides(slideIndex);
 
