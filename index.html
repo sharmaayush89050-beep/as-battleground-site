@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS Battleground</title>
-    
-    <style>
-        /* Base Styles */
+<style>
+        /* Base Styles: Deep Dark Blue Background */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
+            background-color: #0D121F; /* Deep Dark Blue */
+            color: #E0E7FF; /* Light Greyish-Blue Text */
             margin: 0;
             padding: 0;
         }
         
         /* Header & Navigation */
         header {
-            background-color: #2b2b2b;
-            color: #00ff66;
+            background-color: #1A253C; /* Dark Blue Header */
+            color: #00FFFF; /* Electric Cyan */
             padding: 20px;
             text-align: center;
-            border-bottom: 3px solid #00ff66;
+            border-bottom: 3px solid #00FFFF;
         }
         
         /* NAVIGATION STYLE */
         nav a {
-            color: #ffffff;
+            color: #E0E7FF; /* Light Text */
             text-decoration: none;
             padding: 8px 12px; 
             margin: 0 4px;
@@ -39,21 +32,21 @@
             font-size: 0.85em;
         }
         nav a:hover {
-            color: #00ff66;
-            border-color: #00ff66;
+            color: #FFD700; /* Gold/Yellow Hover */
+            border-color: #FFD700;
             background-color: transparent;
         }
         nav a[href="#home"] {
-            color: #ff4500;
-            border-color: #ff4500;
+            color: #00FFFF; /* Cyan Highlight for HOME */
+            border-color: #00FFFF;
         }
 
         /* SEARCH BAR STYLING */
         .search-container {
             text-align: center;
             padding: 15px 0;
-            background-color: #333333;
-            border-bottom: 2px solid #ff4500;
+            background-color: #1A253C; /* Dark Blue Container */
+            border-bottom: 2px solid #00FFFF; /* Cyan Border */
             margin-bottom: 0px; 
         }
         .search-input {
@@ -63,14 +56,14 @@
             border: none;
             border-radius: 5px 0 0 5px;
             font-size: 1em;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #0D121F; /* Input BG */
+            color: #E0E7FF;
             outline: none;
         }
         .search-button {
             padding: 10px 15px;
-            background-color: #ff4500;
-            color: #ffffff;
+            background-color: #00FFFF; /* Cyan Button */
+            color: #1A253C; /* Dark Blue Text */
             border: none;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
@@ -79,7 +72,8 @@
             transition: background-color 0.3s;
         }
         .search-button:hover {
-            background-color: #e03b00;
+            background-color: #FFD700; /* Gold/Yellow Hover */
+            color: #1A253C;
         }
         
         /* Main Layout */
@@ -87,34 +81,34 @@
             padding: 20px;
             max-width: 1000px;
             margin: 20px auto;
-            background-color: #222222;
+            background-color: #111A2E; /* Slightly Lighter Dark Blue */
             border-radius: 10px;
         }
         
         /* Section Headings & Articles */
         section h2 {
-            color: #ff4500;
-            border-bottom: 2px solid #ff4500;
+            color: #00FFFF; /* Cyan Heading */
+            border-bottom: 2px solid #00FFFF;
             padding-bottom: 10px;
             margin-top: 30px;
         }
         article {
-            background-color: #333333;
+            background-color: #1A253C; /* Dark Blue Article BG */
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 15px;
         }
-
-        /* SLIDESHOW CSS START */
+        
+        /* SLIDESHOW CSS */
         .slideshow-container {
             max-width: 800px;
             position: relative;
             margin: auto;
-            border: 5px solid #ff4500;
+            border: 5px solid #00FFFF; /* Cyan Border */
             border-radius: 8px;
             overflow: hidden;
         }
-
+        /* ... (Slideshow ke baaki CSS wahi rahega) ... */
         .mySlides {
             display: none; 
             width: 100%;
@@ -126,8 +120,6 @@
             object-fit: cover;
             vertical-align: middle;
         }
-
-        /* Next & previous buttons */
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -143,19 +135,13 @@
             user-select: none;
             background-color: rgba(0,0,0,0.5);
         }
-
-        /* Position the "next button" to the right */
         .next {
             right: 0;
             border-radius: 3px 0 0 3px;
         }
-
-        /* On hover, add a black background with a little opacity */
         .prev:hover, .next:hover {
             background-color: rgba(0,0,0,0.8);
         }
-
-        /* Caption text */
         .text {
             color: #ffffff;
             font-size: 18px;
@@ -168,13 +154,10 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-
-        /* Fading animation */
         .fade {
             animation-name: fade;
             animation-duration: 1.5s;
         }
-
         @keyframes fade {
             from {opacity: .4} 
             to {opacity: 1}
@@ -182,13 +165,13 @@
         /* SLIDESHOW CSS END */
 
 
-        /* Other Button Styling */
+        /* Trailer and Comment Button Styling */
         .trailer-button, .comment-button {
             display: inline-block;
             padding: 15px 30px;
             margin-top: 20px;
-            background-color: #ff4500; 
-            color: #ffffff;
+            background-color: #00FFFF; /* Cyan Button */
+            color: #1A253C; /* Dark Blue Text */
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2em;
@@ -197,14 +180,32 @@
         }
 
         .trailer-button:hover, .comment-button:hover {
-            background-color: #ff6347;
+            background-color: #FFD700; /* Gold/Yellow Hover */
         }
         
+        /* Ad Banner Spot Styling */
+        #ad-banner {
+             text-align: center; 
+             padding: 20px; 
+             background-color: #330055; /* Purple Ad BG */
+             border: 2px solid #FFD700; /* Gold Border */ 
+             margin-bottom: 20px;
+        }
+        #ad-banner h3 {
+             color: #E0E7FF; 
+             margin-top: 0;
+        }
+        #ad-banner p {
+             color: #FFD700; /* Gold Text */
+             font-weight: bold;
+        }
+
+
         /* Community Section ka design */
         #community {
             text-align: center;
             padding: 40px 0;
-            background-color: #2b2b2b; 
+            background-color: #1A253C; /* Dark Blue BG */
             border-radius: 10px;
             margin-top: 30px;
         }
@@ -214,8 +215,8 @@
             display: inline-block;
             padding: 15px 30px;
             margin-top: 20px;
-            background-color: #00ff66; 
-            color: #1a1a1a; 
+            background-color: #FFD700; /* Gold/Yellow Button */
+            color: #1A253C; /* Dark Blue Text */
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2em;
@@ -224,8 +225,8 @@
         }
 
         .community-button:hover {
-            background-color: #ffffff;
-            color: #00ff66;
+            background-color: #00FFFF; /* Cyan Hover */
+            color: #1A253C;
         }
 
 
@@ -233,177 +234,8 @@
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #2b2b2b;
-            color: #888888;
+            background-color: #1A253C;
+            color: #8892B0;
             margin-top: 40px;
         }
-    </style>
-    
-</head>
-<body>
-    
-    <header>
-        <h1>⚔️ AS BATTLEGROUND ⚔️</h1>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="#news">NEWS</a>
-            <a href="#upcoming">UPCOMING</a>
-            <a href="#gallery">GALLERY</a>
-            
-            <a href="#video-trailer">VIDEOS</a> 
-            <a href="#guides">GUIDES</a>
-            <a href="#schedule">SCHEDULE</a> 
-            
-            <a href="#comments">COMMENT</a> 
-            <a href="#community">COMMUNITY</a> 
-        </nav>
-    </header>
-    
-    <div class="search-container">
-        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input">
-        <button class="search-button">SEARCH</button>
-    </div>
-    <main>
-        
-        <section id="home">
-            <h2>🔥 Welcome to the Battleground! 🔥</h2>
-            <p>Sabse naye game reviews, hacks, aur community discussion yahan milenge.</p>
-        </section>
-        
-        <section id="ad-banner" style="text-align: center; padding: 20px; background-color: #440000; border: 2px solid #ff4500; margin-bottom: 20px;">
-            <a href="#" target="_blank" style="text-decoration: none;">
-                <h3 style="color: #ffffff; margin-top: 0;">AD SPOT: YOUR SPONSORSHIP HERE</h3>
-                <p style="color: #ff4500; font-weight: bold;">(Click to see our latest Gaming Gear deal!)</p>
-            </a>
-        </section>
-        <section id="news">
-            <h2>⚡ Latest Gaming News ⚡</h2>
-            <article>
-                <h3>Free Fire Ka Naya Season Out!</h3>
-                <p>Naye maps aur characters ke baare mein jaaniye...</p>
-            </article>
-        </section>
-        
-        <section id="gallery">
-            <h2>📸 Trending Game Gallery (SLIDESHOW) 📸</h2>
-            
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <a href="https://playvalorant.com/" target="_blank">
-                        <img src="valorant.jpg" alt="Valorant Game Link">
-                    </a>
-                    <div class="text">VALORANT: The Tactical Shooter</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <a href="https://www.minecraft.net/" target="_blank">
-                        <img src="minecraft.jpg" alt="Minecraft Game Link">
-                    </a>
-                    <div class="text">MINECRAFT: Build and Explore</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
-                        <img src="bgmi.jpg" alt="BGMI Game Link">
-                    </a>
-                    <div class="text">BGMI: India's Favorite Battle Royale</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-            <p>Swipe through the visuals from today's top games! (Note: GTA, FIFA, Fortnite images ko slideshow mein include nahi kiya gaya hai.)</p>
-        </section>
-        
-        <section id="video-trailer">
-            <h2>🎥 New Game Trailer 🎥</h2>
-            <p>Don't miss the trailer for the next big AAA title!</p>
-            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
-                WATCH TRAILER ON YOUTUBE 🚀
-            </a>
-        </section>
-
-        <section id="guides">
-            <h2>🏆 Pro Player Guides 🏆</h2>
-            <p>Har game mein master banne ke liye yahan seekhein.</p>
-        </section>
-        
-        <section id="upcoming">
-            <h2>🔮 Upcoming Games 🔮</h2>
-            
-            <article>
-                <h3>Call of Duty: Black Ops Next</h3>
-                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
-            </article>
-
-            <article>
-                <h3>GTA VI: Official Release</h3>
-                <p>Hum sab ka intezaar khatam hone wala hai! Latest leaks ke mutabik, Vice City ka naya avatar February 2027 mein aayega.</p>
-            </article>
-            
-        </section>
-
-        <section id="schedule">
-            <h2>🗓️ Tournament Schedule 🗓️</h2>
-            
-            <article>
-                <h3>BGMI Winter Clash (Solo)</h3>
-                <p><strong>Date:</strong> 15th Nov 2025 | <strong>Time:</strong> 7:00 PM IST</p>
-                <p>Registration is now open! Check community tab for rules.</p>
-            </article>
-
-            <article>
-                <h3>Valorant Asia Regional Finals</h3>
-                <p><strong>Date:</strong> 22nd Nov 2025 | <strong>Time:</strong> 4:30 PM IST</p>
-                <p>Watch the live stream link on our Videos section!</p>
-            </article>
-            
-        </section>
-        
-        <section id="comments">
-            <h2>📢 Leave Your Comment 📢</h2>
-            <p>Tell us what you think about the latest news and guides!</p>
-            <a href="https://forms.gle/5w1mX1fA7t8Z9qD2A" target="_blank" class="comment-button">
-                COMMENT FORM KHOLEIN 💬
-            </a>
-        </section>
-        
-        <section id="community">
-            <h2>🤝 Join Our Community 🤝</h2>
-            <p>Baaki gamers se judne aur exclusive tips paane ke liye turant join karein!</p>
-            <a href="https://discord.gg/" target="_blank" class="community-button">
-                DISCORD SERVER JOIN KAREIN 💬
-            </a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 AS Battleground. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slides[slideIndex-1].style.display = "block";
-        }
-    </script>
-    </body>
-    </html>
+            </style>
