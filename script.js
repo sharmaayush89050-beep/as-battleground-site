@@ -1,3 +1,26 @@
+// --- DYNAMIC TIME-BASED GREETING FUNCTION ---
+function updateGreeting() {
+    const today = new Date();
+    const hour = today.getHours();
+    let greeting;
+
+    // Time ke hisaab se greeting set karein
+    if (hour < 12) {
+        greeting = "🌅 Good Morning, Gamer! Let's get the battle started.";
+    } else if (hour < 17) {
+        greeting = "☀️ Good Afternoon! Time for some intense gaming.";
+    } else {
+        greeting = "🌙 Good Evening! Time to log in and grind.";
+    }
+
+    // Heading element ko update karein
+    const welcomeHeading = document.getElementById('welcome-heading');
+    if (welcomeHeading) {
+        // Heading ko naye greeting se update karein
+        welcomeHeading.textContent = greeting; 
+    }
+}
+
 // Function to handle the search action (Real Filter Feature)
 function performSearch() {
     let searchText = document.getElementById('searchInput').value.toLowerCase().trim();
@@ -36,4 +59,7 @@ function performSearch() {
     }
 }
 
-// Slideshow ka code hata diya gaya hai.
+// Page load hote hi greeting function ko call karein
+window.onload = function() {
+    updateGreeting();
+              }
