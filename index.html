@@ -7,6 +7,7 @@
     
     <meta name="description" content="AS Battleground: The Ultimate Gaming Source for latest News, Pro Guides, and Tournament Schedule in India.">
     <meta name="keywords" content="AS Battleground, Gaming News, BGMI, Valorant, Pro Guides, Gaming Community, Tournament Schedule India">
+    
     <style>
         /* Base Styles: Deep Dark Blue Background */
         body {
@@ -53,7 +54,7 @@
         /* Logo and Slogan Styling */
         h1 { 
             margin: 0; 
-            display: none; /* Hiding the old h1 text */
+            display: none; 
         }
         .website-logo {
             max-width: 280px; 
@@ -64,7 +65,7 @@
             border-radius: 0;
         }
         .slogan-text {
-            color: #FFD700; /* Gold/Yellow color */
+            color: #FFD700; 
             font-size: 1.1em;
             font-weight: bold;
             text-align: center;
@@ -73,7 +74,6 @@
             margin-bottom: 20px;
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); 
         }
-        /* End Logo and Slogan Styling */
 
         /* SEARCH BAR STYLING */
         .search-container {
@@ -215,8 +215,8 @@
             display: inline-block;
             padding: 15px 30px;
             margin-top: 20px;
-            background-color: #00FFFF; /* Cyan Button */
-            color: #1A253C; /* Dark Blue Text */
+            background-color: #00FFFF; 
+            color: #1A253C; 
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2em;
@@ -225,7 +225,7 @@
         }
 
         .trailer-button:hover, .comment-button:hover {
-            background-color: #FFD700; /* Gold/Yellow Hover */
+            background-color: #FFD700; 
         }
         
         /* Ad Banner Spot Styling */
@@ -309,8 +309,8 @@
     </header>
     
     <div class="search-container">
-        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input">
-        <button class="search-button">SEARCH</button>
+        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input" id="searchInput"> 
+        <button class="search-button" onclick="performSearch()">SEARCH</button> 
     </div>
     <main>
         
@@ -331,9 +331,4 @@
                 <h3>Free Fire Ka Naya Season Out!</h3>
                 <p>Naye maps aur characters ke baare mein jaaniye...</p>
             </article>
-        </section>
-        
-        <section id="gallery">
-            <h2>📸 Trending Game Gallery (SLIDESHOW) 📸</h2>
-            
-            <div class="slideshow-container">
+    </section>
