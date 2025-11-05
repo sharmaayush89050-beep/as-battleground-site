@@ -230,17 +230,16 @@
 
         /* NEW CONTACT FORM STYLING */
         #contact-us h2 {
-            border-bottom: 2px solid #FFD700; /* Heading ka border color Gold kiya */
+            border-bottom: 2px solid #FFD700; 
             color: #FFD700;
         }
         .contact-form-container {
-            background-color: #1A253C; /* Form ke peeche ka dark background */
+            background-color: #1A253C; 
             padding: 10px;
             border-radius: 8px;
-            overflow: hidden; /* Iframe ko container ke andar rakhta hai */
+            overflow: hidden; 
             border: 2px solid #00FFFF;
         }
-        /* END NEW CONTACT FORM STYLING */
         
         /* Ad Banner Spot Styling */
         #ad-banner {
@@ -320,4 +319,103 @@
             <a href="#contact-us">CONTACT</a> 
             <a href="#community">COMMUNITY</a> 
         </nav>
-    </
+    </header>
+    
+    <div class="search-container">
+        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input" id="searchInput"> 
+        <button class="search-button" onclick="performSearch()">SEARCH</button> 
+    </div>
+    <main>
+        
+        <section id="home">
+            <h2>🔥 Welcome to the Battleground! 🔥</h2>
+            <p>Sabse naye game reviews, hacks, aur community discussion yahan milenge.</p>
+        </section>
+        
+        <section id="ad-banner">
+            <a href="#" target="_blank" style="text-decoration: none;">
+                <h3>AD SPOT: YOUR SPONSORSHIP HERE</h3>
+                <p>(Click to see our latest Gaming Gear deal!)</p>
+            </a>
+        </section>
+        <section id="news">
+            <h2>⚡ Latest Gaming News ⚡</h2>
+            <article>
+                <h3>Free Fire Ka Naya Season Out!</h3>
+                <p>Naye maps aur characters ke baare mein jaaniye...</p>
+            </article>
+        </section>
+        
+        <section id="gallery">
+            <h2>📸 Trending Game Gallery (SLIDESHOW) 📸</h2>
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <a href="https://playvalorant.com/" target="_blank">
+                        <img src="valorant.jpg" alt="Valorant Game Link">
+                    </a>
+                    <div class="text">VALORANT: The Tactical Shooter</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="https://www.minecraft.net/" target="_blank">
+                        <img src="minecraft.jpg" alt="Minecraft Game Link">
+                    </a>
+                    <div class="text">MINECRAFT: Build and Explore</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
+                        <img src="bgmi.jpg" alt="BGMI Game Link">
+                    </a>
+                    <div class="text">BGMI: India's Favorite Battle Royale</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <p>Swipe through the visuals from today's top games! (Note: GTA, FIFA, Fortnite images ko slideshow mein include nahi kiya gaya hai.)</p>
+        </section>
+        
+        <section id="video-trailer">
+            <h2>🎥 New Game Trailer 🎥</h2>
+            <p>Don't miss the trailer for the next big AAA title!</p>
+            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
+                WATCH TRAILER ON YOUTUBE 🚀
+            </a>
+        </section>
+
+        <section id="guides">
+            <h2>🏆 Pro Player Guides 🏆</h2>
+            <p>Har game mein master banne ke liye yahan seekhein.</p>
+        </section>
+        
+        <section id="upcoming">
+            <h2>🔮 Upcoming Games 🔮</h2>
+            
+            <article>
+                <h3>Call of Duty: Black Ops Next</h3>
+                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
+            </article>
+
+            <article>
+                <h3>GTA VI: Official Release</h3>
+                <p>Hum sab ka intezaar khatam hone wala hai! Latest leaks ke mutabik, Vice City ka naya avatar February 2027 mein aayega.</p>
+            </article>
+            
+        </section>
+
+        <section id="schedule">
+            <h2>🗓️ Tournament Schedule 🗓️</h2>
+            
+            <article>
+                <h3>BGMI Winter Clash (Solo)</h3>
+                <p><strong>Date:</strong> 15th Nov 2025 | <strong>Time:</strong> 7:00 PM IST</p>
+                <p>Registration is now open! Check community tab for rules.</p>
+            </article>
+
+            <article>
+                <h3>Valorant Asia Regional Finals</h3>
+                <p><strong>Date:</strong> 22nd Nov 2025 |
