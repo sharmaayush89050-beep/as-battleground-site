@@ -62,4 +62,4 @@ function performSearch() {
 // Page load hote hi greeting function ko call karein
 window.onload = function() {
     updateGreeting();
-              }
+}
