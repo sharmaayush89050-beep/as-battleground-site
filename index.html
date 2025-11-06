@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>AS Battleground</title>
     
     <link rel="icon" type="image/x-icon" href="/as-battleground-site/favicon.ico">
@@ -279,6 +279,56 @@
         .contact-details a:hover {
             color: #FFD700; /* Gold/Yellow on hover */
         }
+
+        /* ===================================== */
+        /* MEDIA QUERIES for Mobile Responsiveness */
+        /* ===================================== */
+        
+        /* Choti Screens (Mobile Phones) ke liye styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+            .website-logo {
+                max-width: 200px;
+            }
+            .slogan-text {
+                font-size: 0.9em;
+                letter-spacing: 1px;
+            }
+            nav a {
+                display: block; /* Links ko ek dusre ke neeche le aayen */
+                padding: 5px 0;
+                margin: 5px 0;
+                font-size: 0.75em;
+            }
+            main {
+                padding: 15px;
+                margin: 10px;
+            }
+            .full-gallery-images img {
+                width: 48%; /* Do images ek line mein */
+                margin: 1%;
+            }
+            .search-input {
+                width: 75%;
+                margin-bottom: 10px;
+                border-radius: 5px;
+            }
+            .search-button {
+                width: 75%;
+                border-radius: 5px;
+            }
+            .contact-details {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 10px;
+            }
+            .contact-details a {
+                margin: 0;
+            }
+        }
     </style>
     
 </head>
@@ -294,11 +344,9 @@
             <a href="#news">NEWS</a>
             <a href="#upcoming">UPCOMING</a>
             <a href="#gallery">GALLERY</a>
-            
             <a href="#video-trailer">VIDEOS</a> 
             <a href="#guides">GUIDES</a>
             <a href="#schedule">SCHEDULE</a> 
-            
             <a href="#contact-us">CONTACT</a> 
             <a href="#community">COMMUNITY</a> 
         </nav>
@@ -444,4 +492,4 @@
     <script src="script.js"></script> 
 
 </body>
-                </html>
+    </html>
