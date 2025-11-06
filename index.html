@@ -48,14 +48,18 @@
             text-transform: uppercase;
             border-radius: 2px;
             border: 1px solid transparent;
-            transition: color 0.3s, border-color 0.3s;
+            /* UPDATED: Transition for smooth animation (Hover) */
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
             display: inline-block; 
             font-size: 0.85em;
         }
+        /* NEW TAGDA FEATURE: Animated Hover Effect */
         nav a:hover {
             color: #FFD700; /* Gold/Yellow Hover */
             border-color: #FFD700;
-            background-color: transparent;
+            background-color: #1A253C; /* Thoda sa dark background */
+            transform: translateY(-2px); /* Button thoda upar uthega */
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Soft Gold Shadow */
         }
         nav a[href="#home"] {
             color: #00FFFF; /* Cyan Highlight for HOME */
@@ -492,4 +496,4 @@
     <script src="script.js"></script> 
 
 </body>
-    </html>
+                                                                                  </html>
