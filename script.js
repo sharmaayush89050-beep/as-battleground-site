@@ -1,65 +1,103 @@
-// --- DYNAMIC TIME-BASED GREETING FUNCTION ---
+// ======================================
+// DYNAMIC GREETING FUNCTION
+// ======================================
+
 function updateGreeting() {
-    const today = new Date();
-    const hour = today.getHours();
+    const greetingElement = document.getElementById('welcome-heading');
+    if (!greetingElement) return;
+
+    const hour = new Date().getHours();
     let greeting;
 
-    // Time ke hisaab se greeting set karein
-    if (hour < 12) {
-        greeting = "🌅 Good Morning, Gamer! Let's get the battle started.";
-    } else if (hour < 17) {
-        greeting = "☀️ Good Afternoon! Time for some intense gaming.";
+    if (hour >= 5 && hour < 12) {
+        greeting = '☀️ Good Morning, Gamer! 🔥';
+    } else if (hour >= 12 && hour < 17) {
+        greeting = '☕ Good Afternoon, Legend! 🏆';
+    } else if (hour >= 17 && hour < 22) {
+        greeting = '🌙 Good Evening, Warrior! 🚀';
     } else {
-        greeting = "🌙 Good Evening! Time to log in and grind.";
+        greeting = '✨ Late Night Gaming? Welcome! 🎮';
     }
 
-    // Heading element ko update karein
-    const welcomeHeading = document.getElementById('welcome-heading');
-    if (welcomeHeading) {
-        // Heading ko naye greeting se update karein
-        welcomeHeading.textContent = greeting; 
-    }
+    greetingElement.textContent = greeting;
 }
 
-// Function to handle the search action (Real Filter Feature)
+// ======================================
+// SEARCH/FILTER FUNCTION
+// ======================================
+
 function performSearch() {
-    let searchText = document.getElementById('searchInput').value.toLowerCase().trim();
-    let articles = document.getElementsByTagName('article');
-    let found = false;
-
-    if (searchText === "") {
-        // Agar search bar khaali hai, toh saare articles dikhayein
-        for (let i = 0; i < articles.length; i++) {
-            articles[i].style.display = 'block';
-        }
-        return;
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    
+    // Simple alert for demonstration (as actual search functionality is complex)
+    if (query.trim() !== '') {
+        alert(`Searching for: "${query}". \n\n(In a real site, this would filter articles or redirect to a search results page.)`);
+    } else {
+        alert("Please enter a search term.");
     }
+}
 
-    // Har Article ko check karein
-    for (let i = 0; i < articles.length; i++) {
-        let article = articles[i];
+// ======================================
+// NEW FEATURE: LIVE RANKING SIMULATOR
+// (This simulates real-time data fetching)
+// ======================================
+
+function loadLiveRankings() {
+    const rankings = [
+        { rank: 1, title: 'BGMI', trend: 'up', trendText: '+1 Rank', players: '3.4 Million' },
+        { rank: 2, title: 'VALORANT', trend: 'stable', trendText: 'Stable', players: '2.8 Million' },
+        { rank: 3, title: 'Free Fire', trend: 'down', trendText: '-1 Rank', players: '2.5 Million' },
+        { rank: 4, title: 'Minecraft', trend: 'up', trendText: '+2 Ranks', players: '1.9 Million' },
+        { rank: 5, title: 'Apex Legends', trend: 'stable', trendText: 'Stable', players: '1.5 Million' }
+    ];
+
+    const tbody = document.getElementById('liveRankingBody');
+    if (!tbody) return;
+
+    // Clear existing content
+    tbody.innerHTML = '';
+
+    rankings.forEach(game => {
+        const row = document.createElement('tr');
         
-        // Article ka poora text lein aur chota (lowercase) karein
-        let articleText = article.innerText.toLowerCase();
-
-        // Check karein ki search text article mein hai ya nahi
-        if (articleText.includes(searchText)) {
-            // Agar milta hai toh dikhayein (unhide)
-            article.style.display = 'block';
-            found = true;
+        // Trend Icon based on status
+        let iconClass = '';
+        if (game.trend === 'up') {
+            iconClass = 'fas fa-arrow-up';
+        } else if (game.trend === 'down') {
+            iconClass = 'fas fa-arrow-down';
         } else {
-            // Agar nahi milta hai toh chhipa dein (hide)
-            article.style.display = 'none';
+            iconClass = 'fas fa-equals';
         }
-    }
 
-    // Agar kuch nahi mila toh user ko batayein
-    if (!found) {
-        alert("Maaf kijiye, '" + searchText + "' se related koi article nahi mila. Search bar ko khaali karke dobara SEARCH dabayein.");
+        row.innerHTML = `
+            <td>${game.rank}</td>
+            <td>**${game.title}**</td>
+            <td class="${game.trend}"><i class="${iconClass}"></i> ${game.trendText}</td>
+            <td>${game.players}</td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    // Update the last updated time to give a "live" feel
+    const lastUpdateElement = document.querySelector('.last-update');
+    if (lastUpdateElement) {
+        const now = new Date();
+        const formattedTime = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+        const formattedDate = now.toLocaleDateString('en-IN', { month: 'short', day: 'numeric', year: 'numeric' });
+        lastUpdateElement.textContent = `*Data based on community engagement and server load. Last Updated: ${formattedDate} at ${formattedTime}.`;
     }
 }
 
-// Page load hote hi greeting function ko call karein
-window.onload = function() {
-    updateGreeting();
-}
+// ======================================
+// INITIALIZATION ON PAGE LOAD
+// ======================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateGreeting(); 
+    loadLiveRankings(); // Load rankings when the page is fully loaded
+    
+    // Simulate LIVE updates every 30 seconds (for a truly dynamic feel)
+    // Note: In a real site, this would fetch new data from an API.
+    setInterval(loadLiveRankings, 30000); 
+});
