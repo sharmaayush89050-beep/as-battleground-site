@@ -89,3 +89,56 @@ updateRankings();
 
 // Set up interval to update rankings every 10 seconds (10000 milliseconds)
 setInterval(updateRankings, 10000);
+// --- NEW SEARCH FUNCTION START ---
+function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    
+    // Agar search bar khali hai, toh kuch na karein
+    if (query === "") {
+        alert("Kripya search karne ke liye kuch likhein.");
+        return;
+    }
+
+    // Keyword aur corresponding section ID ki mapping
+    const searchMap = {
+        "news": "news",
+        "update": "news",
+        "guide": "guides",
+        "tip": "guides",
+        "pro": "guides",
+        "schedule": "schedule",
+        "tournament": "schedule",
+        "rank": "rankings",
+        "ranking": "rankings",
+        "video": "video-trailer",
+        "trailer": "video-trailer",
+        "gallery": "gallery",
+        "contact": "contact-us",
+        "community": "community",
+        "about": "about" // About page link
+    };
+
+    let targetSection = null;
+
+    // Search query ko map se check karte hain
+    for (const keyword in searchMap) {
+        if (query.includes(keyword)) {
+            targetSection = searchMap[keyword];
+            break;
+        }
+    }
+
+    if (targetSection) {
+        if (targetSection === "about") {
+            // Agar 'about' keyword mila, toh about.html par jaate hain
+            window.location.href = "about.html";
+        } else {
+            // Baaki keywords ke liye index.html ke section par scroll karte hain
+            window.location.href = "index.html#" + targetSection;
+        }
+    } else {
+        // Agar koi keyword match na ho
+        alert(`"${query}" ke liye koi section nahi mila. Kripya naye keywords try karein (jaise: News, Guide, Schedule, Contact, About).`);
+    }
+}
+// --- NEW SEARCH FUNCTION END ---
