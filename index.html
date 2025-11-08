@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -156,6 +156,51 @@
             margin-bottom: 15px;
         }
 
+        /* NEW FEATURE: RANKING TABLE STYLES */
+        .ranking-container {
+            overflow-x: auto; /* Small screen par table ko scrollable banayega */
+            margin-top: 20px;
+        }
+
+        .ranking-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1A253C; 
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 1.05em;
+        }
+
+        .ranking-container th, .ranking-container td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #111A2E; 
+        }
+
+        .ranking-container th {
+            background-color: #0D121F; /* Header background */
+            color: #00FFFF;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .ranking-container tr:hover {
+            background-color: #25334F; /* Hover effect */
+        }
+
+        /* Status Colors */
+        .up { color: #25D366; font-weight: bold; }   /* Green */
+        .down { color: #FF4444; font-weight: bold; } /* Red */
+        .stable { color: #FFD700; }                  /* Gold */
+        
+        /* Icons styling */
+        .ranking-container i {
+            margin-right: 5px;
+        }
+        /* --- END RANKING STYLES --- */
+
+
         /* Trailer and Comment Button Styling */
         .trailer-button {
             display: inline-block;
@@ -192,4 +237,54 @@
              text-align: center; 
              padding: 20px; 
              background-color: #330055; 
-             border:                                                                    </html>
+             border: 2px solid #FFD700; 
+             margin-bottom: 20px;
+        }
+        #ad-banner h3 {
+             color: #E0E7FF; 
+             margin-top: 0;
+        }
+        #ad-banner p {
+             color: #FFD700; 
+             font-weight: bold;
+        }
+
+        /* ALL GALLERY IMAGES STYLING */
+        .full-gallery-images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .full-gallery-images img {
+            width: 30%; /* Teen images ek line mein */
+            max-width: 250px;
+            height: auto;
+            margin: 1%;
+            border-radius: 5px;
+            border: 3px solid #111A2E;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .full-gallery-images img:hover {
+            transform: scale(1.05);
+            border-color: #00FFFF;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Community Section ka design */
+        #community {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #1A253C; 
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Community Button ka design */
+        .community-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #FFD700; 
+            color: #1A253C; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
