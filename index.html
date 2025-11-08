@@ -16,25 +16,21 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <style>
         /* Base Styles: Deep Dark Blue Background */
         body {
-            /* FONT: Exo 2 for all main text */
             font-family: 'Exo 2', sans-serif; 
-            background-color: #0D121F; /* Deep Dark Blue */
-            color: #E0E7FF; /* Light Greyish-Blue Text */
+            background-color: #0D121F; 
+            color: #E0E7FF; 
             margin: 0;
             padding: 0;
-            /* SMOOTH SCROLL PROPERTY */
             scroll-behavior: smooth; 
         }
         
         /* Header & Navigation */
         header {
-            background-color: #1A253C; /* Dark Blue Header */
-            color: #00FFFF; /* Electric Cyan */
+            background-color: #1A253C; 
+            color: #00FFFF; 
             padding: 20px;
             text-align: center;
             border-bottom: 3px solid #00FFFF;
@@ -42,7 +38,7 @@
         
         /* NAVIGATION STYLE */
         nav a {
-            color: #E0E7FF; /* Light Text */
+            color: #E0E7FF; 
             text-decoration: none;
             padding: 8px 12px; 
             margin: 0 4px;
@@ -50,29 +46,25 @@
             text-transform: uppercase;
             border-radius: 2px;
             border: 1px solid transparent;
-            /* UPDATED: Transition for smooth animation (Hover) */
             transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
             display: inline-block; 
             font-size: 0.85em;
         }
-        /* NEW FEATURE: Animated Hover Effect */
+        
         nav a:hover {
-            color: #FFD700; /* Gold/Yellow Hover */
+            color: #FFD700; 
             border-color: #FFD700;
-            background-color: #1A253C; /* Thoda sa dark background */
-            transform: translateY(-2px); /* Button thoda upar uthega */
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Soft Gold Shadow */
+            background-color: #1A253C; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
         }
         nav a[href="#home"] {
-            color: #00FFFF; /* Cyan Highlight for HOME */
+            color: #00FFFF; 
             border-color: #00FFFF;
         }
 
         /* Logo and Slogan Styling */
-        h1 { 
-            margin: 0; 
-            display: none; 
-        }
+        h1 { margin: 0; display: none; }
         .website-logo {
             /* CORRECTED PATH IS IN THE HTML TAG */
             max-width: 280px; 
@@ -83,7 +75,6 @@
             border-radius: 0;
         }
         .slogan-text {
-            /* FONT: Orbitron for slogan */
             color: #FFD700; 
             font-family: 'Orbitron', sans-serif; 
             font-size: 1.1em;
@@ -141,7 +132,6 @@
         
         /* Section Headings & Articles */
         section h2 {
-            /* FONT: Orbitron for section headings */
             color: #00FFFF; 
             font-family: 'Orbitron', sans-serif; 
             font-size: 1.8em; 
@@ -157,9 +147,9 @@
             margin-bottom: 15px;
         }
 
-        /* NEW FEATURE: RANKING TABLE STYLES */
+        /* RANKING TABLE STYLES */
         .ranking-container {
-            overflow-x: auto; /* Small screen par table ko scrollable banayega */
+            overflow-x: auto; 
             margin-top: 20px;
         }
 
@@ -179,7 +169,7 @@
         }
 
         .ranking-container th {
-            background-color: #0D121F; /* Header background */
+            background-color: #0D121F; 
             color: #00FFFF;
             font-family: 'Orbitron', sans-serif;
             font-weight: 600;
@@ -187,19 +177,18 @@
         }
 
         .ranking-container tr:hover {
-            background-color: #25334F; /* Hover effect */
+            background-color: #25334F; 
         }
 
         /* Status Colors */
-        .up { color: #25D366; font-weight: bold; }   /* Green */
-        .down { color: #FF4444; font-weight: bold; } /* Red */
-        .stable { color: #FFD700; }                  /* Gold */
+        .up { color: #25D366; font-weight: bold; }   
+        .down { color: #FF4444; font-weight: bold; } 
+        .stable { color: #FFD700; }                  
         
         /* Icons styling */
         .ranking-container i {
             margin-right: 5px;
         }
-        /* --- END RANKING STYLES --- */
 
 
         /* Trailer and Comment Button Styling */
@@ -310,19 +299,19 @@
         
         /* Social Media Icons Styling */
         .social-icons a {
-            font-size: 1.8em; /* Icon size */
+            font-size: 1.8em; 
             margin: 0 12px;
-            color: #E0E7FF; /* Default color */
+            color: #E0E7FF; 
             transition: color 0.3s;
         }
         .social-icons a:hover {
-            color: #00FFFF; /* Hover effect (Cyan) */
+            color: #00FFFF; 
             text-decoration: none;
         }
 
         /* Footer Contact Details Styling */
         .contact-details a {
-            color: #8892B0; /* Light grey text color */
+            color: #8892B0; 
             text-decoration: none;
             margin: 0 10px;
             font-size: 0.9em;
@@ -332,54 +321,18 @@
             color: #FFD700; 
         }
 
-        /* ===================================== */
         /* MEDIA QUERIES for Mobile Responsiveness */
-        /* ===================================== */
-        
-        /* Choti Screens (Mobile Phones) ke liye styles */
         @media (max-width: 768px) {
-            header {
-                padding: 10px;
-            }
-            .website-logo {
-                max-width: 200px;
-            }
-            .slogan-text {
-                font-size: 0.9em;
-                letter-spacing: 1px;
-            }
-            nav a {
-                display: block; /* Links ko ek dusre ke neeche le aayen */
-                padding: 5px 0;
-                margin: 5px 0;
-                font-size: 0.75em;
-            }
-            main {
-                padding: 15px;
-                margin: 10px;
-            }
-            .full-gallery-images img {
-                width: 48%; /* Do images ek line mein */
-                margin: 1%;
-            }
-            .search-input {
-                width: 75%;
-                margin-bottom: 10px;
-                border-radius: 5px;
-            }
-            .search-button {
-                width: 75%;
-                border-radius: 5px;
-            }
-            .contact-details {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                margin-top: 10px;
-            }
-            .contact-details a {
-                margin: 0;
-            }
+            header { padding: 10px; }
+            .website-logo { max-width: 200px; }
+            .slogan-text { font-size: 0.9em; letter-spacing: 1px; }
+            nav a { display: block; padding: 5px 0; margin: 5px 0; font-size: 0.75em; }
+            main { padding: 15px; margin: 10px; }
+            .full-gallery-images img { width: 48%; margin: 1%; }
+            .search-input { width: 75%; margin-bottom: 10px; border-radius: 5px; }
+            .search-button { width: 75%; border-radius: 5px; }
+            .contact-details { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
+            .contact-details a { margin: 0; }
         }
     </style>
     
@@ -391,150 +344,3 @@
         <p class="slogan-text">YOUR ULTIMATE GAMING SOURCE</p>
 
         <nav>
-            <a href="#home">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="#news">NEWS</a>
-            <a href="#rankings">RANKINGS</a> 
-            <a href="#upcoming">UPCOMING</a>
-            <a href="#gallery">GALLERY</a>
-            <a href="#video-trailer">VIDEOS</a> 
-            <a href="#guides">GUIDES</a>
-            <a href="#schedule">SCHEDULE</a> 
-            <a href="#contact-us">CONTACT</a> 
-            <a href="#community">COMMUNITY</a> 
-        </nav>
-    </header>
-    
-    <div class="search-container">
-        <input type="text" placeholder="Search News, Guides, and Games..." class="search-input" id="searchInput"> 
-        <button class="search-button" onclick="performSearch()">SEARCH</button> 
-    </div>
-    <main>
-        
-        <section id="home" data-aos="fade-up">
-            <h2 id="welcome-heading">🔥 Welcome to the Battleground! 🔥</h2> 
-            <p>Sabse naye game reviews, hacks, aur community discussion yahan milenge.</p>
-        </section>
-        
-        <section id="ad-banner" data-aos="zoom-in">
-            <a href="https://www.gaming-gear-store.com/best-deals" target="_blank" style="text-decoration: none;">
-                
-                <h3>AD SPOT: 🎯 GAMING GEAR STORE 🎯</h3>
-                
-                <p>🚀 CLICK HERE for the best deals on Keyboards, Mice, and Headsets! (Limited Time Offer)</p>
-                
-            </a>
-        </section>
-        <section id="news" data-aos="fade-right">
-            <h2>⚡ Latest Gaming News ⚡</h2>
-            
-            <article>
-                <h3>Free Fire Ka Naya Season Out!</h3>
-                <p>Naye maps aur characters ke baare mein jaaniye...</p>
-                
-                <div class="share-buttons" style="margin-top: 15px;">
-                    <span style="color: #FFD700; font-weight: bold; font-size: 0.9em; margin-right: 10px;">Share:</span>
-                    <a href="https://wa.me/?text=Check%20out%20the%20latest%20Free%20Fire%20Season%20updates%20on%20AS%20Battleground%3A%20https%3A%2F%2Fsharmaayush89050-beep.github.io%2Fas-battleground-site%2F" 
-                       target="_blank" style="color: #25D366; margin-right: 10px;" title="Share on WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
-                    <a href="https://twitter.com/intent/tweet?text=Free%20Fire%20ka%20Naya%20Season%20Out%21%20Latest%20updates%20yahaan%20dekhein%3A&url=https%3A%2F%2Fsharmaayush89050-beep.github.io%2Fas-battleground-site%2F" 
-                       target="_blank" style="color: #1DA1F2; margin-right: 10px;" title="Share on Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsharmaayush89050-beep.github.io%2Fas-battleground-site%2F" 
-                       target="_blank" style="color: #1877F2;" title="Share on Facebook"><i class="fab fa-facebook fa-lg"></i></a>
-                </div>
-            </article>
-        </section>
-        
-        <section id="rankings" data-aos="fade-up">
-            <h2>📈 Live Game Rankings 📈</h2>
-            <p>India ke sabse popular games ki current ranking yahaan dekhein (Updates Hourly!)</p>
-
-            <div class="ranking-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Game Title</th>
-                            <th>Trend Status</th>
-                            <th>Players Online (Avg.)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="liveRankingBody">
-                        <tr>
-                            <td>1</td>
-                            <td>**BGMI**</td>
-                            <td class="up"><i class="fas fa-arrow-up"></i> +1 Rank</td>
-                            <td>3.4 Million</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>**VALORANT**</td>
-                            <td class="stable"><i class="fas fa-equals"></i> Stable</td>
-                            <td>2.8 Million</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>**Free Fire**</td>
-                            <td class="down"><i class="fas fa-arrow-down"></i> -1 Rank</td>
-                            <td>2.5 Million</td>
-                        </tr>
-                         <tr>
-                            <td>4</td>
-                            <td>**Minecraft**</td>
-                            <td class="up"><i class="fas fa-arrow-up"></i> +2 Ranks</td>
-                            <td>1.9 Million</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="last-update" style="text-align: center; font-size: 0.85em; color: #8892B0;">*Data based on community engagement and server load. Last Updated: Nov 8, 2025.</p>
-        </section>
-
-
-        <section id="gallery" data-aos="fade-up" data-aos-duration="1500">
-            <h2>📸 Top Games Gallery 📸</h2>
-            
-            <p>India ke sabse trending games ki gallery yahaan dekhein (Click to Play/Download):</p>
-            
-            <div class="full-gallery-images">
-                <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
-                    <img src="bgmi.jpg" alt="BGMI Game" loading="lazy">
-                </a>
-                
-                <a href="https://playvalorant.com/en-us/" target="_blank"><img src="valorant.jpg" alt="Valorant Game" loading="lazy"></a>
-                
-                <a href="https://www.minecraft.net/en-us" target="_blank"><img src="minecraft.jpg" alt="Minecraft Game" loading="lazy"></a>
-                
-                <a href="https://www.rockstargames.com/gta-v" target="_blank"><img src="gta.jpg" alt="GTA Game" loading="lazy"></a>
-                
-                <a href="https://www.ea.com/games/ea-sports-fc/fc-24" target="_blank"><img src="fifa.jpg" alt="FIFA Game" loading="lazy"></a>
-                
-                <a href="https://www.fortnite.com/" target="_blank"><img src="fortnite.jpg" alt="Fortnite Game" loading="lazy"></a>
-            </div>
-            
-            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #8892B0;">(Note: Sabhi images ek hi folder mein honi chahiye.)</p>
-        </section>
-        
-        <section id="video-trailer">
-            <h2>🎥 New Game Trailer 🎥</h2>
-            <p>Don't miss the trailer for the next big AAA title!</p>
-            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
-                WATCH TRAILER ON YOUTUBE 🚀
-            </a>
-        </section>
-
-        <section id="guides">
-            <h2>🏆 Pro Player Guides 🏆</h2>
-            <p>Har game mein master banne ke liye yahan seekhein.</p>
-        </section>
-        
-        <section id="upcoming" data-aos="fade-left">
-            <h2>🔮 Upcoming Games 🔮</h2>
-            
-            <article>
-                <h3>Call of Duty: Black Ops Next</h3>
-                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
-                
-                <div class="share-buttons" style="margin-top: 15px;">
-                    <span style="color: #FFD700; font-weight: bold; font-size: 0.9em; margin-right: 10px;">Share:</span>
-                    <a href="https://wa.me/?text=Check%20out%20the%20latest%20Call%20of%20Duty%20news%20on%20AS%20Battleground%3A%20https%3A%2F%2Fsharmaayush89050-beep.github.io%2Fas-battleground-site%2F" target="_blank" style="color: #25D366; margin-right: 10px;" title="Share on WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
-                 
