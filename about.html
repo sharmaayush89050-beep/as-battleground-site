@@ -1,79 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AS Battleground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Us - AS Battleground</title>
+    
+    <link rel="icon" type="image/x-icon" href="/as-battleground-site/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background-color: #0D121F; /* Deep Dark Blue */
-            color: #E0E7FF; /* Light Greyish-Blue Text */
-            margin: 0; 
-            padding: 0; 
+        /* Base Styles: Deep Dark Blue Background */
+        body {
+            font-family: 'Exo 2', sans-serif; 
+            background-color: #0D121F; 
+            color: #E0E7FF; 
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; 
         }
-        header { 
-            background-color: #1A253C; /* Dark Blue Header */
-            color: #00FFFF; /* Electric Cyan */
-            padding: 20px; 
-            text-align: center; 
-            border-bottom: 3px solid #00FFFF; /* Cyan Border */
+        
+        /* Header & Navigation (Same as index.html for consistency) */
+        header {
+            background-color: #1A253C; 
+            color: #00FFFF; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00FFFF;
         }
-        h1 { 
-            margin: 0; 
-            display: none; /* Hiding the old h1 text */
+        
+        nav a {
+            color: #E0E7FF; 
+            text-decoration: none;
+            padding: 8px 12px; 
+            margin: 0 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 2px;
+            border: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
+            display: inline-block; 
+            font-size: 0.85em;
         }
-        /* New CSS for the Logo Image in About Page */
+        nav a:hover, nav a[href="about.html"] {
+            color: #FFD700; 
+            border-color: #FFD700;
+            background-color: #1A253C; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
+        }
+        
         .website-logo {
-            max-width: 250px; /* Logo ki size adjust karein */
+            max-width: 280px; 
             height: auto;
             display: block;
-            margin: 0 auto 10px auto; /* Center mein karne aur spacing ke liye */
-            border: none; 
-            border-radius: 0;
+            margin: 0 auto 10px auto; 
         }
-        .content { 
-            max-width: 800px; 
-            margin: 50px auto; 
-            padding: 20px; 
-            background-color: #111A2E; /* Content Box BG */
-            border-radius: 10px; 
+
+        /* Main Content */
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #111A2E; 
+            border-radius: 10px;
+            border: 1px solid #1A253C;
         }
-        .content h2 { 
-            color: #00FFFF; /* Cyan Heading */
-            border-bottom: 2px solid #00FFFF; 
-            padding-bottom: 10px; 
-            margin-top: 0; 
+        
+        main h2 {
+            color: #FFD700; 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 2.2em;
+            text-align: center;
+            border-bottom: 3px solid #00FFFF;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
         }
-        /* Home Button Style */
-        .home-button {
-            display: inline-block;
-            padding: 10px 20px;
+
+        main h3 {
+            color: #00FFFF;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            margin-top: 40px;
+        }
+        
+        /* TEAM MEMBER STYLES (Most Important Update) */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px;
+            justify-content: space-around;
             margin-top: 20px;
-            background-color: #FFD700; /* Gold/Yellow Button */
-            color: #1A253C; /* Dark Blue Text */
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            padding: 10px;
         }
-        .home-button:hover {
-            background-color: #00FFFF; /* Cyan Hover */
+
+        .team-member {
+            background-color: #1A253C; 
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 250px; 
+            border-top: 4px solid #FFD700; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4); 
+        }
+
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 3px solid #00FFFF;
+            margin-bottom: 15px;
+        }
+
+        .team-member h4 {
+            color: #E0E7FF;
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .team-member .role {
+            color: #FFD700;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .team-member .socials a {
+            color: #00FFFF;
+            font-size: 1.4em;
+            margin: 0 8px;
+            transition: color 0.3s;
+        }
+
+        .team-member .socials a:hover {
+            color: #FFD700;
+        }
+
+        /* Footer (Same as index.html for consistency) */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1A253C;
+            color: #8892B0;
+            margin-top: 40px;
+        }
+        .social-icons a {
+            font-size: 1.8em; 
+            margin: 0 12px;
+            color: #E0E7FF; 
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #00FFFF; 
+            text-decoration: none;
+        }
+        .contact-details a {
+            color: #8892B0; 
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        .contact-details a:hover {
+            color: #FFD700; 
+        }
+
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .website-logo { max-width: 200px; }
+            nav a { font-size: 0.75em; }
+            main h2 { font-size: 1.8em; }
+            main { padding: 20px 10px; margin: 10px; }
+            
+            /* Team cards stack on mobile */
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member {
+                width: 90%; 
+            }
         }
     </style>
+    
 </head>
 <body>
+    
     <header>
         <img src="as-battleground-logo.png" alt="AS Battleground Logo" class="website-logo">
+        <nav>
+            <a href="index.html#home">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="index.html#news">NEWS</a>
+            <a href="index.html#rankings">RANKINGS</a> 
+            <a href="index.html#upcoming">UPCOMING</a>
+            <a href="index.html#gallery">GALLERY</a>
+            <a href="index.html#video-trailer">VIDEOS</a> 
+            <a href="index.html#guides">GUIDES</a>
+            <a href="index.html#schedule">SCHEDULE</a> 
+            <a href="index.html#contact-us">CONTACT</a> 
+            <a href="index.html#community">COMMUNITY</a> 
+        </nav>
     </header>
-
-    <div class="content">
-        <h2>About Us</h2>
-        <p>Welcome to AS Battleground! Hum yahaan gaming ki duniya se sabse tez aur sateek khabrein laate hain.</p>
-        <p>Hamaara mission hai ki hum har gamer ko behtareen guides, up-to-date news, aur ek strong community provide karein.</p>
-        <p>We are a dedicated team of gaming enthusiasts, bringing you everything from patch notes to pro tips.</p>
+    
+    <main>
         
-        <a href="index.html" class="home-button">← Go Back Home</a>
-    </div>
+        <h2 data-aos="fade-down">🎯 About AS Battleground 🎯</h2>
+        
+        <p data-aos="fade-up">AS Battleground gaming community aur news ka sabse naya aur tezi se badhne wala source hai. Humara mission hai India mein har bade aur chhote game ki sahi aur samay par khabar dena, professional guides provide karna, aur ek positive gaming culture banana.</p>
+        
+        <p data-aos="fade-up" data-aos-delay="200">Humari shuruaat 2025 mein ek chote se blog se hui thi, aur aaj hum thousands of gamers ko daily updates dete hain. Hum har game ko dil se support karte hain, chahe woh BGMI ho, Valorant ho, ya koi naya indie title.</p>
+
+        <h3 data-aos="fade-right">Our Mission</h3>
+        <ul data-aos="fade-left">
+            <li>✅ **Accurate News:** Har game update aur patch ki sabse sahi khabar.</li>
+            <li>✅ **Pro Guides:** Experts dwara banaye gaye tips aur tricks.</li>
+            <li>✅ **Community Building:** Ek non-toxic, madatgaar gaming community banana.</li>
+            <li>✅ **Tournament Focus:** Local aur national tournaments ki live coverage.</li>
+        </ul>
+
+        <h3 data-aos="fade-up">Meet The Team</h3>
+        
+        <div class="team-container" data-aos="fade-up" data-aos-delay="300">
+            
+            <div class="team-member">
+                <img src="ayush-photo.jpg" alt="Ayush Sharma - Founder" class="member-photo">
+                <h4>Ayush Sharma</h4>
+                <p class="role">Founder & Chief Editor</p>
+                <div class="socials">
+                    <a href="#" target="_blank" title="Ayush's Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" title="Ayush's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="writer-photo.jpg" alt="Team Member - Writer" class="member-photo">
+                <h4>Sanket Kumar</h4>
+                <p class="role">Pro Guide Writer</p>
+                <div class="socials">
+                    <a href="#" target="_blank" title="Sanket's Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" title="Sanket's YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="designer-photo.jpg" alt="Team Member - Designer" class="member-photo">
+                <h4>Riya Singh</h4>
+                <p class="role">Creative Designer</p>
+                <div class="socials">
+                    <a href="#" target="_blank" title="Riya's GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="Riya's Dribbble"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #8892B0;">(Note: Please use your own team member photos: ayush-photo.jpg, writer-photo.jpg, designer-photo.jpg)</p>
+
+    </main>
+
+    <footer>
+        <div class="social-icons" style="margin-bottom: 10px;">
+            <a href="https://discord.gg/" target="_blank" aria-label="Join Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="contact-details">
+            <a href="mailto:support@asbattleground.com">Email: support@asbattleground.com</a>
+            |
+            <a href="tel:+919876543210">Call: +91-9876543210</a>
+        </div>
+        
+        <p>&copy; 2025 AS Battleground. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, 
+        once: true,
+      });
+    </script>
+
 </body>
-</html>
+                </html>
