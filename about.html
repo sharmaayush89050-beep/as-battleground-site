@@ -15,136 +15,45 @@
     
     <style>
         /* Base Styles: Deep Dark Blue Background */
-        body {
-            font-family: 'Exo 2', sans-serif; 
-            background-color: #0D121F; 
-            color: #E0E7FF; 
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth; 
-        }
-        
-        /* Header & Navigation (Same as index.html for consistency) */
-        header {
-            background-color: #1A253C; 
-            color: #00FFFF; 
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #00FFFF;
-        }
+        body { font-family: 'Exo 2', sans-serif; background-color: #0D121F; color: #E0E7FF; margin: 0; padding: 0; scroll-behavior: smooth; }
+        header { background-color: #1A253C; color: #00FFFF; padding: 20px; text-align: center; border-bottom: 3px solid #00FFFF; }
         
         nav a {
-            color: #E0E7FF; 
-            text-decoration: none;
-            padding: 8px 12px; 
-            margin: 0 4px;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 2px;
-            border: 1px solid transparent;
+            color: #E0E7FF; text-decoration: none; padding: 8px 12px; margin: 0 4px; font-weight: 700;
+            text-transform: uppercase; border-radius: 2px; border: 1px solid transparent;
             transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
-            display: inline-block; 
-            font-size: 0.85em;
+            display: inline-block; font-size: 0.85em;
         }
         nav a:hover, nav a[href="about.html"] {
-            color: #FFD700; 
-            border-color: #FFD700;
-            background-color: #1A253C; 
-            transform: translateY(-2px); 
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
+            color: #FFD700; border-color: #FFD700; background-color: #1A253C; 
+            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
         }
         
-        /* LOGO PATH CORRECTED */
-        .website-logo {
-            max-width: 280px; 
-            height: auto;
-            display: block;
-            margin: 0 auto 10px auto; 
-        }
+        .website-logo { max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto; }
 
         /* Main Content */
-        main {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 20px auto;
-            background-color: #111A2E; 
-            border-radius: 10px;
-            border: 1px solid #1A253C;
-        }
-        
+        main { padding: 40px 20px; max-width: 900px; margin: 20px auto; background-color: #111A2E; border-radius: 10px; border: 1px solid #1A253C; }
         main h2 {
-            color: #FFD700; 
-            font-family: 'Orbitron', sans-serif; 
-            font-size: 2.2em;
-            text-align: center;
-            border-bottom: 3px solid #00FFFF;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            color: #FFD700; font-family: 'Orbitron', sans-serif; font-size: 2.2em; text-align: center;
+            border-bottom: 3px solid #00FFFF; padding-bottom: 15px; margin-bottom: 30px;
         }
-
-        main h3 {
-            color: #00FFFF;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5em;
-            margin-top: 40px;
-        }
+        main h3 { color: #00FFFF; font-family: 'Orbitron', sans-serif; font-size: 1.5em; margin-top: 40px; }
         
-        /* TEAM MEMBER STYLES (PHOTO PATHS CORRECTED) */
-        .team-container {
-            display: flex;
-            flex-wrap: wrap; 
-            gap: 20px;
-            justify-content: space-around;
-            margin-top: 20px;
-            padding: 10px;
-        }
-
+        /* TEAM MEMBER STYLES */
+        .team-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; margin-top: 20px; padding: 10px; }
         .team-member {
-            background-color: #1A253C; 
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            width: 250px; 
-            border-top: 4px solid #FFD700; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            background-color: #1A253C; padding: 20px; border-radius: 8px; text-align: center;
+            width: 250px; border-top: 4px solid #FFD700; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
-        .team-member:hover {
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4); 
-        }
+        .team-member:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4); }
 
-        .member-photo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; 
-            object-fit: cover;
-            border: 3px solid #00FFFF;
-            margin-bottom: 15px;
-        }
+        .member-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #00FFFF; margin-bottom: 15px; }
 
-        /* Footer (Same as index.html for consistency) */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #1A253C;
-            color: #8892B0;
-            margin-top: 40px;
-        }
-        .social-icons a {
-            font-size: 1.8em; 
-            margin: 0 12px;
-            color: #E0E7FF; 
-            transition: color 0.3s;
-        }
-        .contact-details a {
-            color: #8892B0; 
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
+        /* Footer */
+        footer { text-align: center; padding: 15px; background-color: #1A253C; color: #8892B0; margin-top: 40px; }
+        .social-icons a { font-size: 1.8em; margin: 0 12px; color: #E0E7FF; transition: color 0.3s; }
+        .contact-details a { color: #8892B0; text-decoration: none; margin: 0 10px; font-size: 0.9em; transition: color 0.3s; }
 
         /* Media Queries */
         @media (max-width: 768px) {
@@ -152,14 +61,8 @@
             nav a { font-size: 0.75em; }
             main h2 { font-size: 1.8em; }
             main { padding: 20px 10px; margin: 10px; }
-            
-            .team-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .team-member {
-                width: 90%; 
-            }
+            .team-container { flex-direction: column; align-items: center; }
+            .team-member { width: 90%; }
         }
     </style>
     
@@ -204,32 +107,32 @@
         <div class="team-container">
             
             <div class="team-member">
-                <img src="ayush-photo.jpg" alt="Ayush Sharma - Founder" class="member-photo">
-                <h4>Ayush Sharma</h4>
+                <img src="yashbhir-photo.jpg" alt="Yashbhir Chauhan - Founder" class="member-photo">
+                <h4>Yashbhir Chauhan</h4>
                 <p class="role">Founder & Chief Editor</p>
                 <div class="socials">
-                    <a href="#" target="_blank" title="Ayush's Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank" title="Ayush's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" title="Yashbhir's Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" title="Yashbhir's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
             <div class="team-member">
-                <img src="writer-photo.jpg" alt="Team Member - Writer" class="member-photo">
-                <h4>Sanket Kumar</h4>
+                <img src="tushar-photo.jpg" alt="Tushar Sharma - Writer" class="member-photo">
+                <h4>Tushar Sharma</h4>
                 <p class="role">Pro Guide Writer</p>
                 <div class="socials">
-                    <a href="#" target="_blank" title="Sanket's Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" title="Sanket's YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" title="Tushar's Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" title="Tushar's YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
             <div class="team-member">
-                <img src="designer-photo.jpg" alt="Team Member - Designer" class="member-photo">
-                <h4>Riya Singh</h4>
+                <img src="govind-photo.jpg" alt="Govind Panchal - Designer" class="member-photo">
+                <h4>Govind Panchal</h4>
                 <p class="role">Creative Designer</p>
                 <div class="socials">
-                    <a href="#" target="_blank" title="Riya's GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" title="Riya's Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" target="_blank" title="Govind's GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="Govind's Dribbble"><i class="fab fa-dribbble"></i></a>
                 </div>
             </div>
 
@@ -254,5 +157,5 @@
         <p>&copy; 2025 AS Battleground. All rights reserved.</p>
     </footer>
     
-    </body>
-                        </html>
+</body>
+                                                                               </html>
