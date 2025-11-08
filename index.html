@@ -4,56 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>AS Battleground</title>
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    
     <meta name="description" content="AS Battleground: The Ultimate Gaming Source for latest News, Pro Guides, and Tournament Schedule in India.">
     <meta name="keywords" content="AS Battleground, Gaming News, BGMI, Valorant, Pro Guides, Gaming Community, Tournament Schedule India">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* Base Styles: Deep Dark Blue Background */
-        body { font-family: 'Exo 2', sans-serif; background-color: #0D121F; color: #E0E7FF; margin: 0; padding: 0; scroll-behavior: smooth; }
-        header { background-color: #1A253C; color: #00FFFF; padding: 20px; text-align: center; border-bottom: 3px solid #00FFFF; }
+        body {
+            font-family: 'Exo 2', sans-serif; 
+            background-color: #0D121F; 
+            color: #E0E7FF; 
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; 
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #1A253C; 
+            color: #00FFFF; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00FFFF;
+        }
         
         /* NAVIGATION STYLE */
         nav a {
-            color: #E0E7FF; text-decoration: none; padding: 8px 12px; margin: 0 4px; font-weight: 700;
-            text-transform: uppercase; border-radius: 2px; border: 1px solid transparent;
+            color: #E0E7FF; 
+            text-decoration: none;
+            padding: 8px 12px; 
+            margin: 0 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 2px;
+            border: 1px solid transparent;
             transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
-            display: inline-block; font-size: 0.85em;
+            display: inline-block; 
+            font-size: 0.85em;
         }
-        nav a:hover { color: #FFD700; border-color: #FFD700; background-color: #1A253C; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); }
-        nav a[href="#home"] { color: #00FFFF; border-color: #00FFFF; }
+        
+        nav a:hover {
+            color: #FFD700; 
+            border-color: #FFD700;
+            background-color: #1A253C; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
+        }
+        nav a[href="#home"] {
+            color: #00FFFF; 
+            border-color: #00FFFF;
+        }
 
-        .website-logo { max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto; border: none; border-radius: 0; }
+        /* Logo and Slogan Styling */
+        .website-logo {
+            max-width: 280px; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto; 
+        }
         .slogan-text {
-            color: #FFD700; font-family: 'Orbitron', sans-serif; font-size: 1.1em; font-weight: 600; 
-            text-align: center; letter-spacing: 2px; margin-top: -10px; margin-bottom: 20px;
+            color: #FFD700; 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.1em;
+            font-weight: 600; 
+            text-align: center;
+            letter-spacing: 2px; 
+            margin-top: -10px; 
+            margin-bottom: 20px;
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); 
         }
 
-        .search-container { text-align: center; padding: 15px 0; background-color: #1A253C; border-bottom: 2px solid #00FFFF; margin-bottom: 0px; }
-        .search-input { padding: 10px 15px; width: 60%; max-width: 400px; border: none; border-radius: 5px 0 0 5px; font-size: 1em; background-color: #0D121F; color: #E0E7FF; outline: none; }
-        .search-button { padding: 10px 15px; background-color: #00FFFF; color: #1A253C; border: none; border-radius: 0 5px 5px 0; cursor: pointer; font-size: 1em; font-weight: bold; transition: background-color 0.3s; }
-        .search-button:hover { background-color: #FFD700; color: #1A253C; }
+        /* SEARCH BAR STYLING */
+        .search-container {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #1A253C; 
+            border-bottom: 2px solid #00FFFF; 
+        }
+        .search-input {
+            padding: 10px 15px;
+            width: 60%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1em;
+            background-color: #0D121F; 
+            color: #E0E7FF;
+            outline: none;
+        }
+        .search-button {
+            padding: 10px 15px;
+            background-color: #00FFFF; 
+            color: #1A253C; 
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .search-button:hover {
+            background-color: #FFD700; 
+            color: #1A253C;
+        }
         
-        main { padding: 20px; max-width: 1000px; margin: 20px auto; background-color: #111A2E; border-radius: 10px; }
-        section h2 { color: #00FFFF; font-family: 'Orbitron', sans-serif; font-size: 1.8em; font-weight: 800; border-bottom: 2px solid #00FFFF; padding-bottom: 10px; margin-top: 30px; }
-        article { background-color: #1A253C; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        /* Main Layout */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #111A2E; 
+            border-radius: 10px;
+        }
+        
+        /* Section Headings & Articles */
+        section h2 {
+            color: #00FFFF; 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.8em; 
+            font-weight: 800; 
+            border-bottom: 2px solid #00FFFF;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        article {
+            background-color: #1A253C; 
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
 
-        .full-gallery-images { text-align: center; margin-top: 20px; }
-        .full-gallery-images img { width: 30%; max-width: 250px; height: auto; margin: 1%; border-radius: 5px; border: 3px solid #111A2E; transition: transform 0.3s ease, border-color 0.3s; }
-        .full-gallery-images img:hover { transform: scale(1.05); border-color: #00FFFF; box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+        /* RANKING TABLE STYLES */
+        .ranking-container {
+            overflow-x: auto; 
+            margin-top: 20px;
+        }
 
-        footer { text-align: center; padding: 15px; background-color: #1A253C; color: #8892B0; margin-top: 40px; }
-        .social-icons a { font-size: 1.8em; margin: 0 12px; color: #E0E7FF; transition: color 0.3s; }
-        .contact-details a { color: #8892B0; text-decoration: none; margin: 0 10px; font-size: 0.9em; transition: color 0.3s; }
+        .ranking-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1A253C; 
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 1.05em;
+        }
 
+        .ranking-container th, .ranking-container td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #111A2E; 
+        }
+
+        .ranking-container th {
+            background-color: #0D121F; 
+            color: #00FFFF;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .ranking-container tr:hover {
+            background-color: #25334F; 
+        }
+
+        /* Status Colors */
+        .up { color: #25D366; font-weight: bold; }   
+        .down { color: #FF4444; font-weight: bold; } 
+        .stable { color: #FFD700; }                  
+        
+        /* ALL GALLERY IMAGES STYLING (CORRECTED PATHS) */
+        .full-gallery-images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .full-gallery-images img {
+            width: 30%; /* Teen images ek line mein */
+            max-width: 250px;
+            height: auto;
+            margin: 1%;
+            border-radius: 5px;
+            border: 3px solid #111A2E;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .full-gallery-images img:hover {
+            transform: scale(1.05);
+            border-color: #00FFFF;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Community Button ka design */
+        .community-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #FFD700; 
+            color: #1A253C; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px; 
+            transition: background-color 0.3s;
+        }
+
+        .community-button:hover {
+            background-color: #00FFFF; 
+            color: #1A253C;
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1A253C;
+            color: #8892B0;
+            margin-top: 40px;
+        }
+        
+        /* MEDIA QUERIES for Mobile Responsiveness */
         @media (max-width: 768px) {
+            header { padding: 10px; }
             .website-logo { max-width: 200px; }
             nav a { display: block; padding: 5px 0; margin: 5px 0; font-size: 0.75em; }
+            main { padding: 15px; margin: 10px; }
+            .full-gallery-images img { width: 48%; margin: 1%; }
             .search-input { width: 75%; margin-bottom: 10px; border-radius: 5px; }
             .search-button { width: 75%; border-radius: 5px; }
         }
@@ -94,38 +276,136 @@
         </section>
         
         <section id="ad-banner">
-            <a href="https://www.gaming-gear-store.com/best-deals" target="_blank" style="text-decoration: none;">
+             <a href="https://www.gaming-gear-store.com/best-deals" target="_blank" style="text-decoration: none;">
                 <h3>AD SPOT: 🎯 GAMING GEAR STORE 🎯</h3>
                 <p>🚀 CLICK HERE for the best deals on Keyboards, Mice, and Headsets! (Limited Time Offer)</p>
             </a>
         </section>
-
+        
         <section id="news">
             <h2>⚡ Latest Gaming News ⚡</h2>
             <article>
                 <h3>Free Fire Ka Naya Season Out!</h3>
                 <p>Naye maps aur characters ke baare mein jaaniye...</p>
-                </article>
+            </article>
         </section>
         
         <section id="rankings">
             <h2>📈 Live Game Rankings 📈</h2>
             <p>India ke sabse popular games ki current ranking yahaan dekhein (Updates Hourly!)</p>
+
+            <div class="ranking-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Game Title</th>
+                            <th>Trend Status</th>
+                            <th>Players Online (Avg.)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liveRankingBody">
+                        <tr><td>1</td><td>**BGMI**</td><td class="up"><i class="fas fa-arrow-up"></i> +1 Rank</td><td>3.4 Million</td></tr>
+                        <tr><td>2</td><td>**VALORANT**</td><td class="stable"><i class="fas fa-equals"></i> Stable</td><td>2.8 Million</td></tr>
+                        <tr><td>3</td><td>**Free Fire**</td><td class="down"><i class="fas fa-arrow-down"></i> -1 Rank</td><td>2.5 Million</td></tr>
+                         <tr><td>4</td><td>**Minecraft**</td><td class="up"><i class="fas fa-arrow-up"></i> +2 Ranks</td><td>1.9 Million</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="last-update" style="text-align: center; font-size: 0.85em; color: #8892B0;">*Data based on community engagement and server load. Last Updated: Nov 8, 2025.</p>
+        </section>
+
+
+        <section id="gallery">
+            <h2>📸 Top Games Gallery 📸</h2>
+            
+            <p>India ke sabse trending games ki gallery yahaan dekhein (Click to Play/Download):</p>
+            
+            <div class="full-gallery-images">
+                <a href="https://www.battlegroundsmobileindia.com/" target="_blank">
+                    <img src="bgmi.jpg" alt="BGMI Game" loading="lazy">
+                </a>
+                <a href="https://playvalorant.com/en-us/" target="_blank"><img src="valorant.jpg" alt="Valorant Game" loading="lazy"></a>
+                <a href="https://www.minecraft.net/en-us" target="_blank"><img src="minecraft.jpg" alt="Minecraft Game" loading="lazy"></a>
+                <a href="https://www.rockstargames.com/gta-v" target="_blank"><img src="gta.jpg" alt="GTA Game" loading="lazy"></a>
+                <a href="https://www.ea.com/games/ea-sports-fc/fc-24" target="_blank"><img src="fifa.jpg" alt="FIFA Game" loading="lazy"></a>
+                <a href="https://www.fortnite.com/" target="_blank"><img src="fortnite.jpg" alt="Fortnite Game" loading="lazy"></a>
+            </div>
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #8892B0;">(Note: Sabhi images ek hi folder mein honi chahiye.)</p>
+        </section>
+        
+        <section id="video-trailer">
+            <h2>🎥 New Game Trailer 🎥</h2>
+            <p>Don't miss the trailer for the next big AAA title!</p>
+            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
+                WATCH TRAILER ON YOUTUBE 🚀
+            </a>
+        </section>
+
+        <section id="guides">
+            <h2>🏆 Pro Player Guides 🏆</h2>
+            <p>Har game mein master banne ke liye yahan seekhein.</p>
+        </section>
+        
+        <section id="upcoming">
+            <h2>🔮 Upcoming Games 🔮</h2>
+            
+            <article>
+                <h3>Call of Duty: Black Ops Next</h3>
+                <p>Nayi technology aur graphics ke saath, yeh title 2026 mein aane wala hai! Iske multiplayer maps ki details check karein.</p>
+            </article>
+
+            <article>
+                <h3>GTA VI: Official Release</h3>
+                <p>Hum sab ka intezaar khatam hone wala hai! Latest leaks ke mutabik, Vice City ka naya avatar February 2027 mein aayega.</p>
+            </article>
+            
+        </section>
+
+        <section id="schedule">
+            <h2>🗓️ Tournament Schedule 🗓️</h2>
+            
+            <article>
+                <h3>BGMI Winter Clash (Solo)</h3>
+                <p><strong>Date:</strong> 15th Nov 2025 | <strong>Time:</strong> 7:00 PM IST</p>
+                <p>Registration is now open! Check community tab for rules.</p>
+            </article>
+
+            <article>
+                <h3>Valorant Asia Regional Finals</h3>
+                <p><strong>Date:</strong> 22nd Nov 2025 | <strong>Time:</strong> 4:30 PM IST</p>
+                <p>Watch the live stream link on our Videos section!</p>
+            </article>
+            
+        </section>
+        
+        <section id="contact-us">
+            <h2>📧 Contact Us Directly 📧</h2>
+            <p>Humein kisi bhi sawaal, feedback ya partnership ke liye likhein! Hum aapko jald hi reply karenge.</p>
+            
+            <div class="contact-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjm2zfKXM1ER16BL5GuNMnCqHVl-cJQ6BCtX_OA9_izL5G_w/viewform?embedded=true" 
+                    width="100%" 
+                    height="700" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    title="AS Battleground Contact Form">
+                    Loading…
+                </iframe>
+            </div>
             </section>
         
-        <section id="gallery">...</section>
-        <section id="video-trailer">...</section>
-        <section id="guides">...</section>
-        <section id="upcoming">...</section>
-        <section id="schedule">...</section>
-        <section id="contact-us">...</section>
-        <section id="community">...</section>
+        <section id="community">
+            <h2>🤝 Join Our Community 🤝</h2>
+            <p>Baaki gamers se judne aur exclusive tips paane ke liye turant join karein!</p>
+            <a href="https://discord.gg/" target="_blank" class="community-button">
+                DISCORD SERVER JOIN KAREIN 💬
+            </a>
+        </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 AS Battleground. All rights reserved.</p>
-    </footer>
-    
-    </body>
-            </html>
+        <div class="social-icons
