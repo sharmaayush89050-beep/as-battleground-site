@@ -198,8 +198,17 @@
         @media (max-width: 768px) {
             header { padding: 10px; }
             .website-logo { max-width: 200px; }
-            nav { display: none; width: 100%; text-align: left; padding-top: 50px; }
-            nav.active { display: block; position: absolute; top: 0; left: 0; z-index: 10; background-color: #0D121F; border-bottom: 3px solid #00FFFF;}
+            nav { display: none; width: 100%; text-align: left; padding-top: 0; } /* Padding-top fixed */
+            nav.active { 
+                display: block; 
+                position: relative; /* **MAIN FIX: Content ko neeche dhakelne ke liye** */
+                top: 0;
+                left: 0;
+                z-index: 10; 
+                background-color: #0D121F; 
+                border-bottom: 3px solid #00FFFF;
+                padding-top: 0;
+            }
             nav.active a { display: block; padding: 15px 20px; margin: 0; font-size: 0.85em; border-bottom: 1px solid #1A253C; }
             #menuToggle { display: block; }
             .website-logo, .slogan-text { margin-left: 60px; }
@@ -256,4 +265,151 @@
         
         <section id="home">
             <h2 id="welcome-heading">🔥 Welcome to the Battleground! 🔥</h2> 
-            <p>Find the newest game reviews, hacks,
+            <p>Find the newest game reviews, hacks, and community discussions here.</p>
+        </section>
+        
+        <section id="ad-banner">
+            <a href="https://www.gaming-gear-store.com/best-deals" target="_blank" style="text-decoration: none;">
+                <h3>AD SPOT: 🎯 GAMING GEAR STORE 🎯</h3>
+                <p>🚀 CLICK HERE for the best deals on Keyboards, Mice, and Headsets! (Limited Time Offer)</p>
+            </a>
+        </section>
+        
+        <section id="news">
+            <h2>⚡ Latest Gaming News ⚡</h2>
+            <article>
+                <h3>Free Fire's New Season is Out!</h3>
+                <p>Learn more about the new maps and characters...</p>
+            </article>
+        </section>
+        
+        <section id="rankings">
+            <h2>📈 Live Game Rankings 📈</h2>
+            <p>See the current rankings of India's most popular games here (Updates Automatically!)</p>
+
+            <div class="ranking-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Game Title</th>
+                            <th>Trend Status</th>
+                            <th>Players Online (Avg.)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="liveRankingBody">
+                        </tbody>
+                </table>
+            </div>
+            <p class="last-update" style="text-align: center; margin-top: 10px; font-size: 0.85em; color: #8892B0;">Loading live data...</p>
+        </section>
+
+
+        <section id="gallery">
+            <h2>📸 Top Games Gallery 📸</h2>
+            <p>View the gallery of India's most trending games here (Click to Play/Download):</p>
+            
+            <div class="full-gallery-images" id="gameGallery">
+                </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #8892B0;">(Note: All images must be in the same folder.)</p>
+        </section>
+        
+        <section id="video-trailer">
+            <h2>🎥 New Game Trailer 🎥</h2>
+            <p>Don't miss the trailer for the next big AAA title!</p>
+            <a href="https://www.youtube.com/watch?v=AWmxtH2nrAU" target="_blank" class="trailer-button">
+                WATCH TRAILER ON YOUTUBE 🚀
+            </a>
+        </section>
+
+        <section id="guides">
+            <h2>🏆 Pro Player Guides 🏆</h2>
+            <p>Learn here to become a master in every game.</p>
+        </section>
+        
+        <section id="upcoming">
+            <h2>🔮 Upcoming Games 🔮</h2>
+            
+            <article>
+                <h3>Call of Duty: Black Ops Next</h3>
+                <p>Featuring new technology and graphics, this title is coming in 2026! Check details on its multiplayer maps.</p>
+            </article>
+
+            <article>
+                <h3>GTA VI: Official Release</h3>
+                <p>Our long wait is almost over! According to the latest leaks, the new avatar of Vice City will arrive in February 2027.</p>
+            </article>
+            
+        </section>
+
+        <section id="schedule">
+            <h2>🗓️ Tournament Schedule 🗓️</h2>
+            
+            <article>
+                <h3>BGMI Winter Clash (Solo)</h3>
+                <p><strong>Date:</strong> 15th Nov 2025 | <strong>Time:</strong> 7:00 PM IST</p>
+                <p class="timer-display">Time Remaining: <strong id="bgmi-timer">Loading...</strong></p>
+                <p>Registration is now open! Check community tab for rules.</p>
+            </article>
+
+            <article>
+                <h3>Valorant Asia Regional Finals</h3>
+                <p><strong>Date:</strong> 22nd Nov 2025 | <strong>Time:</strong> 4:30 PM IST</p>
+                <p class="timer-display">Time Remaining: <strong id="valorant-timer">Loading...</strong></p>
+                <p>Watch the live stream link on our Videos section!</p>
+            </article>
+            
+        </section>
+        
+        <section id="contact-us">
+            <h2>📧 Contact Us Directly 📧</h2>
+            <p>Write to us for any questions, feedback, or partnership inquiries! We will reply shortly.</p>
+            
+            <div class="contact-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjm2zfKXM1ER16BL5GuNMnCqHVl-cJQ6BCtX_OA9_izL5G_w/viewform?embedded=true" 
+                    width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0"
+                    title="AS Battleground Contact Form">
+                    Loading…
+                </iframe>
+            </div>
+            </section>
+        
+        <section id="community">
+            <h2>🤝 Join Our Community 🤝</h2>
+            <p>Join now to connect with other gamers and get exclusive tips!</p>
+            <a href="https://discord.gg/" target="_blank" class="community-button">
+                JOIN DISCORD SERVER 💬
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-icons" style="margin-bottom: 10px;">
+            <a href="https://discord.gg/" target="_blank" aria-label="Join Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="contact-details">
+            <a href="mailto:contact@asbattleground.com">Email: contact@asbattleground.com</a>
+            |
+            <a href="tel:+919876543210">Call: +91-9876543210</a>
+        </div>
+        
+        <p>&copy; <span id="currentYear">2025</span> AS Battleground. All rights reserved.</p>
+    </footer>
+    
+    <div id="cookieConsent" class="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience. By clicking 'Accept', you agree to our use of cookies.</p>
+        <button id="acceptCookies" onclick="acceptCookieConsent()">Accept</button>
+    </div>
+
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="ranking-script.js"></script>
+
+</body>
+    </html>
