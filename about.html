@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>About Us - AS Battleground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AS Battleground</title>
     
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -18,126 +16,119 @@
         body { font-family: 'Exo 2', sans-serif; background-color: #0D121F; color: #E0E7FF; margin: 0; padding: 0; scroll-behavior: smooth; }
         header { background-color: #1A253C; color: #00FFFF; padding: 20px; text-align: center; border-bottom: 3px solid #00FFFF; }
         
+        /* NAVIGATION STYLE */
         nav a {
             color: #E0E7FF; text-decoration: none; padding: 8px 12px; margin: 0 4px; font-weight: 700;
             text-transform: uppercase; border-radius: 2px; border: 1px solid transparent;
             transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
             display: inline-block; font-size: 0.85em;
         }
-        nav a:hover, nav a[href="about.html"] {
-            color: #FFD700; border-color: #FFD700; background-color: #1A253C; 
-            transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
-        }
-        
+        nav a:hover { color: #FFD700; border-color: #FFD700; background-color: #1A253C; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); }
+        nav a[href="index.html"] { color: #00FFFF; border-color: #00FFFF; } /* Highlight for HOME in About page */
+
+        /* Logo and Slogan Styling */
         .website-logo { max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto; }
-
-        /* Main Content */
-        main { padding: 40px 20px; max-width: 900px; margin: 20px auto; background-color: #111A2E; border-radius: 10px; border: 1px solid #1A253C; }
-        main h2 {
-            color: #FFD700; font-family: 'Orbitron', sans-serif; font-size: 2.2em; text-align: center;
-            border-bottom: 3px solid #00FFFF; padding-bottom: 15px; margin-bottom: 30px;
+        .slogan-text {
+            color: #FFD700; font-family: 'Orbitron', sans-serif; font-size: 1.1em; font-weight: 600; 
+            text-align: center; letter-spacing: 2px; margin-top: -10px; margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); 
         }
-        main h3 { color: #00FFFF; font-family: 'Orbitron', sans-serif; font-size: 1.5em; margin-top: 40px; }
+
+        /* Main Layout */
+        main { padding: 20px; max-width: 1000px; margin: 20px auto; background-color: #111A2E; border-radius: 10px; }
         
-        /* TEAM MEMBER STYLES */
-        .team-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; margin-top: 20px; padding: 10px; }
-        .team-member {
-            background-color: #1A253C; padding: 20px; border-radius: 8px; text-align: center;
-            width: 250px; border-top: 4px solid #FFD700; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .team-member:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4); }
+        /* Section Headings */
+        section h2 { color: #00FFFF; font-family: 'Orbitron', sans-serif; font-size: 1.8em; font-weight: 800; border-bottom: 2px solid #00FFFF; padding-bottom: 10px; margin-top: 30px; }
+        
+        /* ABOUT US SECTION */
+        #about-content p { line-height: 1.6; margin-bottom: 15px; }
 
-        .member-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #00FFFF; margin-bottom: 15px; }
-
+        /* TEAM SECTION */
+        .team-container { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 20px; }
+        .team-member { background-color: #1A253C; padding: 20px; border-radius: 8px; margin: 10px; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+        .team-member img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid #FFD700; }
+        .team-member h3 { color: #FFD700; margin-top: 0; font-family: 'Orbitron', sans-serif; }
+        .team-member p { font-size: 0.9em; color: #E0E7FF; }
+        
         /* Footer */
         footer { text-align: center; padding: 15px; background-color: #1A253C; color: #8892B0; margin-top: 40px; }
-        .social-icons a { font-size: 1.8em; margin: 0 12px; color: #E0E7FF; transition: color 0.3s; }
-        .contact-details a { color: #8892B0; text-decoration: none; margin: 0 10px; font-size: 0.9em; transition: color 0.3s; }
-
-        /* Media Queries */
+        
+        /* MEDIA QUERIES for Mobile Responsiveness */
         @media (max-width: 768px) {
+            header { padding: 10px; }
             .website-logo { max-width: 200px; }
-            nav a { font-size: 0.75em; }
-            main h2 { font-size: 1.8em; }
-            main { padding: 20px 10px; margin: 10px; }
-            .team-container { flex-direction: column; align-items: center; }
-            .team-member { width: 90%; }
+            nav a { display: block; padding: 5px 0; margin: 5px 0; font-size: 0.75em; }
+            main { padding: 15px; margin: 10px; }
+            .team-member { width: 100%; margin: 10px 0; }
         }
+
+        /* LIGHT MODE CLASSES (from index.html to maintain toggle consistency) */
+        .light-mode { background-color: #F8F8F8; color: #1A253C; }
+        .light-mode header { background-color: #FFFFFF; border-bottom-color: #1A253C; color: #1A253C; }
+        .light-mode main { background-color: #FFFFFF; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+        .light-mode section h2 { color: #1A253C; border-bottom-color: #1A253C; }
+        .light-mode .team-member { background-color: #EFEFEF; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+        .light-mode .team-member h3 { color: #FF4444; }
+        .light-mode footer { background-color: #EFEFEF; color: #555555; }
+
     </style>
-    
 </head>
-<body>
+<body onload="checkSavedTheme()">
     
     <header>
         <img src="as-battleground-logo.png" alt="AS Battleground Logo" class="website-logo">
+        <p class="slogan-text">YOUR ULTIMATE GAMING SOURCE</p>
+
         <nav>
-            <a href="index.html#home">HOME</a>
-            <a href="about.html">ABOUT</a>
+            <a href="index.html">HOME</a>
+            <a href="#about-us">ABOUT</a>
             <a href="index.html#news">NEWS</a>
             <a href="index.html#rankings">RANKINGS</a> 
-            <a href="index.html#upcoming">UPCOMING</a>
-            <a href="index.html#gallery">GALLERY</a>
-            <a href="index.html#video-trailer">VIDEOS</a> 
             <a href="index.html#guides">GUIDES</a>
-            <a href="index.html#schedule">SCHEDULE</a> 
             <a href="index.html#contact-us">CONTACT</a> 
-            <a href="index.html#community">COMMUNITY</a> 
         </nav>
     </header>
-    
+
     <main>
         
-        <h2>🎯 About AS Battleground 🎯</h2>
-        
-        <p>AS Battleground gaming community aur news ka sabse naya aur tezi se badhne wala source hai. Humara mission hai India mein har bade aur chhote game ki sahi aur samay par khabar dena, professional guides provide karna, aur ek positive gaming culture banana.</p>
-        
-        <p>Humari shuruaat 2025 mein ek chote se blog se hui thi, aur aaj hum thousands of gamers ko daily updates dete hain. Hum har game ko dil se support karte hain, chahe woh BGMI ho, Valorant ho, ya koi naya indie title.</p>
-
-        <h3>Our Mission</h3>
-        <ul>
-            <li>✅ **Accurate News:** Har game update aur patch ki sabse sahi khabar.</li>
-            <li>✅ **Pro Guides:** Experts dwara banaye gaye tips aur tricks.</li>
-            <li>✅ **Community Building:** Ek non-toxic, madatgaar gaming community banana.</li>
-            <li>✅ **Tournament Focus:** Local aur national tournaments ki live coverage.</li>
-        </ul>
-
-        <h3>Meet The Team</h3>
-        
-        <div class="team-container">
+        <section id="about-us">
+            <h2>⭐ About Us: The Vision ⭐</h2> 
             
-            <div class="team-member">
-                <img src="yashbhir-photo.jpg" alt="Yashbhir Chauhan - Founder" class="member-photo">
-                <h4>Yashbhir Chauhan</h4>
-                <p class="role">Founder & Chief Editor</p>
-                <div class="socials">
-                    <a href="#" target="_blank" title="Yashbhir's Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank" title="Yashbhir's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            <div id="about-content">
+                <p>Welcome to **AS Battleground**, the premier destination for Indian gaming enthusiasts. We are more than just a website—we are a dedicated community built by passionate gamers, for gamers.</p>
+                <p>Our vision is simple: to provide the most current, accurate, and relevant information on competitive gaming, including BGMI, Valorant, Free Fire, and upcoming AAA titles. Whether you are looking for the latest patch notes, advanced pro guides, or real-time tournament schedules, you will find it here.</p>
+                <p>We believe in fostering a positive and competitive gaming environment. Join us as we strive to elevate the Indian esports scene!</p>
             </div>
-
-            <div class="team-member">
-                <img src="tushar-photo.jpg" alt="Tushar Sharma - Writer" class="member-photo">
-                <h4>Tushar Sharma</h4>
-                <p class="role">Pro Guide Writer</p>
-                <div class="socials">
-                    <a href="#" target="_blank" title="Tushar's Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" title="Tushar's YouTube"><i class="fab fa-youtube"></i></a>
+        </section>
+        
+        <section id="team">
+            <h2>Meet The Team</h2>
+            
+            <div class="team-container">
+                
+                <div class="team-member">
+                    <img src="yashbhir-photo.jpg" alt="Photo of Yashbhir"> 
+                    <h3>Yashbhir S.</h3>
+                    <p>Founder & Chief Editor</p>
+                    <p>Yashbhir handles the overall strategy and content quality. He is the mastermind behind our competitive ranking systems.</p>
                 </div>
-            </div>
 
-            <div class="team-member">
-                <img src="govind-photo.jpg" alt="Govind Panchal - Designer" class="member-photo">
-                <h4>Govind Panchal</h4>
-                <p class="role">Creative Designer</p>
-                <div class="socials">
-                    <a href="#" target="_blank" title="Govind's GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" title="Govind's Dribbble"><i class="fab fa-dribbble"></i></a>
+                <div class="team-member">
+                    <img src="tushar-photo.jpg" alt="Photo of Tushar"> 
+                    <h3>Tushar A.</h3>
+                    <p>Lead Tech Developer</p>
+                    <p>Tushar is responsible for all the dynamic features of the site, including the live rankings, countdown timer, and theme toggle functionality.</p>
                 </div>
-            </div>
+                
+                <div class="team-member">
+                    <img src="govind-photo.jpg" alt="Photo of Govind"> 
+                    <h3>Govind P.</h3>
+                    <p>Community Manager & Content Creator</p>
+                    <p>Govind manages our social media channels, organizes community events, and creates the popular Pro Player Guides.</p>
+                </div>
 
-        </div>
-        <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #8892B0;">(Note: Please ensure all image files are uploaded and named correctly in the root folder.)</p>
+            </div>
+        </section>
 
     </main>
 
@@ -157,5 +148,19 @@
         <p>&copy; 2025 AS Battleground. All rights reserved.</p>
     </footer>
     
+    <script>
+        // Yahin par hum Local Storage ko check karke theme set karenge
+        function checkSavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const body = document.body;
+            
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+                // About page par theme toggle button nahi hai, isliye sirf body class badlenge
+            }
+        }
+    </script>
+
 </body>
+            </html>
                                                                                </html>
