@@ -1,15 +1,10 @@
 /**
  * ranking-script.js
- * Is file mein sabhi dynamic features ka logic hai:
- * 1. Auto-Updating Rankings
- * 2. Dynamic Gallery (Easy to Add New Games)
- * 3. Functional Search
- * 4. Tournament Countdown Timer
+ * FINAL CODE: Contains all dynamic features.
  */
 
 // --- 1. RANKING MANAGEMENT CODE ---
 
-// Ranking Table ka Data (Initial Values)
 let rankings = [
     { title: "BGMI", players: 3400000, trend: 1, lastChange: 0 },
     { title: "VALORANT", players: 2800000, trend: 0, lastChange: 0 },
@@ -17,11 +12,9 @@ let rankings = [
     { title: "Minecraft", players: 1900000, trend: 2, lastChange: 0 }
 ];
 
-// HTML Table Body ka Element
 const rankingBody = document.getElementById('liveRankingBody');
 
 function updateRankings() {
-    // Player count aur trend ko randomly badalte hain
     rankings = rankings.map(game => {
         const changePercentage = (Math.random() * 0.01 - 0.005); 
         game.players = Math.round(game.players * (1 + changePercentage));
@@ -32,10 +25,8 @@ function updateRankings() {
         return game;
     });
 
-    // Players ke hisaab se rankings ko sort karte hain
     rankings.sort((a, b) => b.players - a.players);
 
-    // HTML Table ko naye data se render karte hain
     let htmlContent = '';
     rankings.forEach((game, index) => {
         const rank = index + 1;
@@ -78,21 +69,18 @@ function updateRankings() {
     }
 }
 
-// Initial call and Interval
 updateRankings();
 setInterval(updateRankings, 10000);
 
 // --- 2. DYNAMIC GALLERY MANAGEMENT ---
 
 const gameList = [
-    // Naya game add karne ke liye, sirf ek naya object yahaan likhein!
     { name: "BGMI Game", src: "bgmi.jpg", url: "https://www.battlegroundsmobileindia.com/" },
     { name: "Valorant Game", src: "valorant.jpg", url: "https://playvalorant.com/en-us/" },
     { name: "Minecraft Game", src: "minecraft.jpg", url: "https://www.minecraft.net/en-us" },
     { name: "GTA Game", src: "gta.jpg", url: "https://www.rockstargames.com/gta-v" },
     { name: "FIFA Game", src: "fifa.jpg", url: "https://www.ea.com/games/ea-sports-fc/fc-24" },
     { name: "Fortnite Game", src: "fortnite.jpg", url: "https://www.fortnite.com/" }
-    // { name: "Naya Game", src: "naya-game.jpg", url: "https://naya-game-link.com/" }
 ];
 
 function loadGallery() {
@@ -112,7 +100,6 @@ function loadGallery() {
     galleryContainer.innerHTML = galleryHTML;
 }
 
-// Gallery ko page load hote hi chalaayein
 loadGallery();
 
 
@@ -122,7 +109,7 @@ function performSearch() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     
     if (query === "") {
-        alert("Kripya search karne ke liye kuch likhein.");
+        alert("Please enter something to search.");
         return;
     }
 
@@ -149,7 +136,7 @@ function performSearch() {
             window.location.href = "index.html#" + targetSection;
         }
     } else {
-        alert(`"${query}" ke liye koi section nahi mila. Kripya naye keywords try karein.`);
+        alert(`No section found for "${query}". Please try different keywords.`);
     }
 }
 
@@ -182,9 +169,118 @@ function setupCountdown(targetDateString, elementId) {
     }, 1000); 
 }
 
-// Target Dates: Current year 2025 ke hisaab se set hain (Target Date aur Current Date se automatically calculate hoga)
-// BGMI: 15th Nov 2025, 7:00 PM (IST)
 setupCountdown("Nov 15, 2025 19:00:00 GMT+0530", "bgmi-timer");
-
-// Valorant: 22nd Nov 2025, 4:30 PM (IST)
 setupCountdown("Nov 22, 2025 16:30:00 GMT+0530", "valorant-timer");
+
+
+// --- 5. BACK TO TOP BUTTON LOGIC ---
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    const button = document.getElementById("backToTopBtn");
+    // Show button if scrolled more than 20px
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+}
+
+
+// --- 6. THEME TOGGLE (WITH LOCAL STORAGE MEMORY) ---
+
+// Function to check and apply saved theme on load
+(function checkSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const button = document.getElementById('themeToggle');
+    
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        
+        if (button) {
+            const icon = button.querySelector('i');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            button.title = "Switch to Dark Mode";
+        }
+    }
+})(); 
+
+// Function to handle theme toggle click
+function toggleTheme() {
+    const body = document.body;
+    const button = document.getElementById('themeToggle');
+    const icon = button.querySelector('i');
+
+    body.classList.toggle('light-mode');
+    
+    // Save theme choice to Local Storage
+    if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+    } else {
+        localStorage.setItem('theme', 'dark');
+    }
+
+    if (body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        button.title = "Switch to Dark Mode";
+    } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        button.title = "Switch to Light Mode";
+    }
+}
+
+
+// --- 7. MOBILE MENU TOGGLE ---
+
+function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    // Toggle the 'active' class to show/hide the menu
+    nav.classList.toggle('active');
+}
+
+
+// --- 8. COOKIE CONSENT LOGIC ---
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Show banner if cookies haven't been accepted
+    if (localStorage.getItem('cookiesAccepted') !== 'yes') {
+        const banner = document.getElementById('cookieConsent');
+        if (banner) {
+            banner.style.display = 'block';
+        }
+    }
+});
+
+function acceptCookieConsent() {
+    const banner = document.getElementById('cookieConsent');
+    if (banner) {
+        banner.style.display = 'none'; // Hide banner
+    }
+    // Set flag in Local Storage
+    localStorage.setItem('cookiesAccepted', 'yes');
+}
+
+
+// --- 9. DYNAMIC FOOTER YEAR LOGIC ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Set the current year for the copyright notice
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('currentYear');
+    
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+});
