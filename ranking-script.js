@@ -197,8 +197,8 @@ function scrollToTop() {
 
 // --- 6. THEME TOGGLE (WITH LOCAL STORAGE MEMORY) ---
 
-// Function to check and apply saved theme on load
-(function checkSavedTheme() {
+// Function to check and apply saved theme on load (IIFE removed for about.html compatibility)
+function checkSavedTheme() { 
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const button = document.getElementById('themeToggle');
@@ -206,14 +206,15 @@ function scrollToTop() {
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         
-        if (button) {
+        // This check ensures we don't crash on about.html which doesn't have the button
+        if (button) { 
             const icon = button.querySelector('i');
             icon.classList.remove('fa-sun');
             icon.classList.add('fa-moon');
             button.title = "Switch to Dark Mode";
         }
     }
-})(); 
+}
 
 // Function to handle theme toggle click
 function toggleTheme() {
@@ -243,6 +244,7 @@ function toggleTheme() {
 
 
 // --- 7. MOBILE MENU TOGGLE ---
+// Note: This function is only used on index.html but must remain here for the script to load correctly.
 
 function toggleMenu() {
     const nav = document.getElementById('mainNav');
@@ -274,11 +276,11 @@ function acceptCookieConsent() {
 
 
 // --- 9. DYNAMIC FOOTER YEAR LOGIC ---
+// Note: This logic is also included in about.html's internal script for redundancy, but the main file is cleaner this way.
 
 document.addEventListener('DOMContentLoaded', () => {
     // Set the current year for the copyright notice
     const currentYear = new Date().getFullYear();
-    // Is element ko dono files (index.html, about.html) mein use kiya gaya hai
     const yearElement = document.getElementById('currentYear');
     
     if (yearElement) {
