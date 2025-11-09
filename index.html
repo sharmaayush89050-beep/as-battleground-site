@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
     
     <meta name="description" content="AS Battleground: The Ultimate Gaming Source for latest News, Pro Guides, and Tournament Schedule in India.">
-    <meta name="keywords" content="AS Battleground, Gaming News, BGMI, Valorant, Pro Guides, Gaming Community, Tournament Schedule India">
+    <meta name="keywords" content="AS Battleground, Gaming News, BGMI, Valorant, Pro Guides, Gaming Community, Tournament Schedule India, HTML5 Game">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,7 +202,7 @@
                 display: none; 
                 width: 100%; 
                 text-align: left; 
-                padding-top: 0; /* Padding-top fixed */
+                padding-top: 0; 
             } 
             nav.active { 
                 display: block; 
@@ -214,7 +214,7 @@
                 border-bottom: 3px solid #00FFFF;
                 padding-top: 0;
                 
-                /* **SCROLL FIX YAHAN HAI:** */
+                /* SCROLL FIX */
                 max-height: 80vh;      
                 overflow-y: auto;      
             }
@@ -256,7 +256,7 @@
             <a href="#news">NEWS</a>
             <a href="#rankings">RANKINGS</a> 
             <a href="#upcoming">UPCOMING</a>
-            <a href="#gallery">GALLERY</a>
+            <a href="#game-zone">GAME ZONE</a> <a href="#gallery">GALLERY</a>
             <a href="#video-trailer">VIDEOS</a> 
             <a href="#guides">GUIDES</a>
             <a href="#schedule">SCHEDULE</a> 
@@ -330,7 +330,25 @@
                 WATCH TRAILER ON YOUTUBE 🚀
             </a>
         </section>
-
+        
+        <section id="game-zone">
+            <h2>🕹️ Play Our Classic Mini Game! 🕹️</h2>
+            <p style="text-align: center; color: #FFD700; font-weight: bold;">Enjoy a quick round of 2048 right here on our website!</p>
+            
+            <div class="game-container" style="text-align: center; margin-top: 20px;">
+                <iframe 
+                    src="https://miniplay.com/embed/2048-cupcakes" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0"
+                    allow="gamepad"
+                    style="border: 4px solid #00FFFF; border-radius: 8px; max-width: 800px; display: block; margin: 0 auto;"
+                    allowfullscreen>
+                </iframe>
+                <p style="font-size: 0.8em; margin-top: 10px; color: #8892B0;">(Game loads from an external source.)</p>
+            </div>
+        </section>
+        
         <section id="guides">
             <h2>🏆 Pro Player Guides 🏆</h2>
             <p>Learn here to become a master in every game.</p>
@@ -421,4 +439,4 @@
     <script src="ranking-script.js"></script>
 
 </body>
-    </html>
+        </html>
