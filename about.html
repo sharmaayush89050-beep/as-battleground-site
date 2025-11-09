@@ -56,5 +56,116 @@
         /* LIGHT MODE CLASSES (Consistent with index.html) */
         .light-mode { background-color: #F8F8F8; color: #1A253C; }
         .light-mode header { background-color: #FFFFFF; border-bottom-color: #1A253C; color: #1A253C; }
-        .light-mode main { background-color: #FFFFFF; box-shadow: 0 0
-                                                                               </html>
+        .light-mode main { background-color: #FFFFFF; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+        .light-mode section h2 { color: #1A253C; border-bottom-color: #1A253C; }
+        .light-mode .team-member { background-color: #EFEFEF; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+        .light-mode .team-member h3 { color: #FF4444; }
+        .light-mode footer { background-color: #EFEFEF; color: #555555; }
+        
+        /* MEDIA QUERIES for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header { padding: 10px; }
+            .website-logo { max-width: 200px; }
+            nav a { display: block; padding: 5px 0; margin: 5px 0; font-size: 0.75em; }
+            main { padding: 15px; margin: 10px; }
+            .team-member { width: 100%; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body onload="checkSavedTheme()">
+    
+    <header>
+        <img src="as-battleground-logo.png" alt="AS Battleground Logo" class="website-logo">
+        <p class="slogan-text">YOUR ULTIMATE GAMING SOURCE</p>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="#about-us">ABOUT</a>
+            <a href="index.html#news">NEWS</a>
+            <a href="index.html#rankings">RANKINGS</a> 
+            <a href="index.html#guides">GUIDES</a>
+            <a href="index.html#contact-us">CONTACT</a> 
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="about-us">
+            <h2>⭐ About Us: The Vision ⭐</h2> 
+            
+            <div id="about-content">
+                <p>Welcome to **AS Battleground**, the premier destination for Indian gaming enthusiasts. We are more than just a website—we are a dedicated community built by passionate gamers, for gamers.</p>
+                <p>Our vision is simple: to provide the most current, accurate, and relevant information on competitive gaming, including BGMI, Valorant, Free Fire, and upcoming AAA titles. Whether you are looking for the latest patch notes, advanced pro guides, or real-time tournament schedules, you will find it here.</p>
+                <p>We believe in fostering a positive and competitive gaming environment. Join us as we strive to elevate the Indian esports scene!</p>
+            </div>
+        </section>
+        
+        <section id="team">
+            <h2>Meet The Team</h2>
+            
+            <div class="team-container">
+                
+                <div class="team-member">
+                    <img src="yashbhir-photo.jpg" alt="Photo of Yashbhir"> 
+                    <h3>Yashbhir S.</h3>
+                    <p>Founder & Chief Editor</p>
+                    <p>Yashbhir handles the overall strategy and content quality. He is the mastermind behind our competitive ranking systems.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="tushar-photo.jpg" alt="Photo of Tushar"> 
+                    <h3>Tushar A.</h3>
+                    <p>Lead Tech Developer</p>
+                    <p>Tushar is responsible for all the dynamic features of the site, including the live rankings, countdown timer, and theme toggle functionality.</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="govind-photo.jpg" alt="Photo of Govind"> 
+                    <h3>Govind P.</h3>
+                    <p>Community Manager & Content Creator</p>
+                    <p>Govind manages our social media channels, organizes community events, and creates the popular Pro Player Guides.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-icons" style="margin-bottom: 10px;">
+            <a href="https://discord.gg/" target="_blank" aria-label="Join Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="contact-details">
+            <a href="mailto:contact@asbattleground.com">Email: contact@asbattleground.com</a>
+            |
+            <a href="tel:+919876543210">Call: +91-9876543210</a>
+        </div>
+        
+        <p>&copy; <span id="currentYear">2025</span> AS Battleground. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // This function checks the saved theme from index.html (via Local Storage)
+        function checkSavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const body = document.body;
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+            }
+        }
+        
+        // This code sets the current year automatically (Dynamic Footer Year)
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
+
+</body>
+</html>
