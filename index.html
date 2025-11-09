@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AS Battleground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>AS Battleground</title>
     
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    
+    <meta name="description" content="AS Battleground: The Ultimate Gaming Source for latest News, Pro Guides, and Tournament Schedule in India.">
+    <meta name="keywords" content="AS Battleground, Gaming News, BGMI, Valorant, Pro Guides, Gaming Community, Tournament Schedule India">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -24,7 +29,7 @@
             display: inline-block; font-size: 0.85em;
         }
         nav a:hover { color: #FFD700; border-color: #FFD700; background-color: #1A253C; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); }
-        nav a[href="index.html"] { color: #00FFFF; border-color: #00FFFF; } 
+        nav a[href="#home"] { color: #00FFFF; border-color: #00FFFF; }
 
         /* Logo and Slogan Styling */
         .website-logo { max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto; }
@@ -34,138 +39,115 @@
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.4); 
         }
 
+        /* SEARCH BAR STYLING */
+        .search-container { text-align: center; padding: 15px 0; background-color: #1A253C; border-bottom: 2px solid #00FFFF; }
+        .search-input { padding: 10px 15px; width: 60%; max-width: 400px; border: none; border-radius: 5px 0 0 5px; font-size: 1em; background-color: #0D121F; color: #E0E7FF; outline: none; }
+        .search-button { padding: 10px 15px; background-color: #00FFFF; color: #1A253C; border: none; border-radius: 0 5px 5px 0; cursor: pointer; font-size: 1em; font-weight: bold; transition: background-color 0.3s; }
+        .search-button:hover { background-color: #FFD700; color: #1A253C; }
+        
         /* Main Layout */
         main { padding: 20px; max-width: 1000px; margin: 20px auto; background-color: #111A2E; border-radius: 10px; }
         
-        /* Section Headings */
+        /* Section Headings & Articles */
         section h2 { color: #00FFFF; font-family: 'Orbitron', sans-serif; font-size: 1.8em; font-weight: 800; border-bottom: 2px solid #00FFFF; padding-bottom: 10px; margin-top: 30px; }
-        
-        /* ABOUT US SECTION */
-        #about-content p { line-height: 1.6; margin-bottom: 15px; }
+        article { background-color: #1A253C; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
 
-        /* TEAM SECTION */
-        .team-container { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 20px; }
-        .team-member { background-color: #1A253C; padding: 20px; border-radius: 8px; margin: 10px; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
-        .team-member img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid #FFD700; }
-        .team-member h3 { color: #FFD700; margin-top: 0; font-family: 'Orbitron', sans-serif; }
-        .team-member p { font-size: 0.9em; color: #E0E7FF; }
+        /* RANKING TABLE STYLES */
+        .ranking-container { overflow-x: auto; margin-top: 20px; }
+        .ranking-container table { width: 100%; border-collapse: collapse; background-color: #1A253C; border-radius: 8px; overflow: hidden; font-size: 1.05em; }
+        .ranking-container th, .ranking-container td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #111A2E; }
+        .ranking-container th { background-color: #0D121F; color: #00FFFF; font-family: 'Orbitron', sans-serif; font-weight: 600; text-transform: uppercase; }
+        .ranking-container tr:hover { background-color: #25334F; }
+        .up { color: #25D366; font-weight: bold; }   
+        .down { color: #FF4444; font-weight: bold; } 
+        .stable { color: #FFD700; }                  
         
+        /* ALL GALLERY IMAGES STYLING */
+        .full-gallery-images { text-align: center; margin-top: 20px; }
+        .full-gallery-images img {
+            width: 30%; max-width: 250px; height: auto; margin: 1%; border-radius: 5px; border: 3px solid #111A2E;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .full-gallery-images img:hover { transform: scale(1.05); border-color: #00FFFF; box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+
+        /* Community Button ka design */
+        .community-button {
+            display: inline-block; padding: 15px 30px; margin-top: 20px; background-color: #FFD700; 
+            color: #1A253C; text-decoration: none; font-weight: bold; font-size: 1.2em; border-radius: 50px; 
+            transition: background-color 0.3s;
+        }
+        .community-button:hover { background-color: #00FFFF; color: #1A253C; }
+        
+        /* Timer Display Style */
+        .timer-display { font-size: 1.1em; margin-top: 5px; font-family: 'Orbitron', sans-serif; }
+
         /* Footer */
         footer { text-align: center; padding: 15px; background-color: #1A253C; color: #8892B0; margin-top: 40px; }
+        
+        /* BACK TO TOP BUTTON STYLES */
+        #backToTopBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 20px; 
+            right: 30px; 
+            z-index: 99; 
+            border: none; 
+            outline: none; 
+            background-color: #00FFFF; 
+            color: #1A253C; 
+            cursor: pointer; 
+            padding: 15px; 
+            border-radius: 50%; 
+            font-size: 18px; 
+            transition: background-color 0.3s, opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
 
-        /* LIGHT MODE CLASSES (Consistent with index.html) */
+        #backToTopBtn:hover {
+            background-color: #FFD700; 
+            color: #1A253C;
+        }
+        
+        /* THEME TOGGLE BUTTON STYLES */
+        #themeToggle {
+            position: absolute; 
+            top: 25px;
+            right: 25px;
+            background-color: transparent; 
+            color: #FFD700; 
+            border: 2px solid #FFD700; 
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        #themeToggle:hover {
+            background-color: #FFD700;
+            color: #1A253C; 
+        }
+        
+        /* MOBILE MENU TOGGLE STYLES */
+        #menuToggle {
+            display: none; 
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background-color: transparent;
+            color: #00FFFF;
+            border: 2px solid #00FFFF;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            z-index: 100;
+        }
+
+        /* LIGHT MODE CLASSES */
         .light-mode { background-color: #F8F8F8; color: #1A253C; }
         .light-mode header { background-color: #FFFFFF; border-bottom-color: #1A253C; color: #1A253C; }
+        .light-mode nav a:hover { color: #FF4444; border-color: #FF4444; box-shadow: 0 4px 10px rgba(255, 68, 68, 0.3); }
         .light-mode main { background-color: #FFFFFF; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
-        .light-mode section h2 { color: #1A253C; border-bottom-color: #1A253C; }
-        .light-mode .team-member { background-color: #EFEFEF; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
-        .light-mode .team-member h3 { color: #FF4444; }
-        .light-mode footer { background-color: #EFEFEF; color: #555555; }
-        
-        /* MEDIA QUERIES for Mobile Responsiveness */
-        @media (max-width: 768px) {
-            header { padding: 10px; }
-            .website-logo { max-width: 200px; }
-            nav a { display: block; padding: 5px 0; margin: 5px 0; font-size: 0.75em; }
-            main { padding: 15px; margin: 10px; }
-            .team-member { width: 100%; margin: 10px 0; }
-        }
-    </style>
-</head>
-<body onload="checkSavedTheme()">
-    
-    <header>
-        <img src="as-battleground-logo.png" alt="AS Battleground Logo" class="website-logo">
-        <p class="slogan-text">YOUR ULTIMATE GAMING SOURCE</p>
-
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="#about-us">ABOUT</a>
-            <a href="index.html#news">NEWS</a>
-            <a href="index.html#rankings">RANKINGS</a> 
-            <a href="index.html#guides">GUIDES</a>
-            <a href="index.html#contact-us">CONTACT</a> 
-        </nav>
-    </header>
-
-    <main>
-        
-        <section id="about-us">
-            <h2>⭐ About Us: The Vision ⭐</h2> 
-            
-            <div id="about-content">
-                <p>Welcome to **AS Battleground**, the premier destination for Indian gaming enthusiasts. We are more than just a website—we are a dedicated community built by passionate gamers, for gamers.</p>
-                <p>Our vision is simple: to provide the most current, accurate, and relevant information on competitive gaming, including BGMI, Valorant, Free Fire, and upcoming AAA titles. Whether you are looking for the latest patch notes, advanced pro guides, or real-time tournament schedules, you will find it here.</p>
-                <p>We believe in fostering a positive and competitive gaming environment. Join us as we strive to elevate the Indian esports scene!</p>
-            </div>
-        </section>
-        
-        <section id="team">
-            <h2>Meet The Team</h2>
-            
-            <div class="team-container">
-                
-                <div class="team-member">
-                    <img src="yashbhir-photo.jpg" alt="Photo of Yashbhir"> 
-                    <h3>Yashbhir S.</h3>
-                    <p>Founder & Chief Editor</p>
-                    <p>Yashbhir handles the overall strategy and content quality. He is the mastermind behind our competitive ranking systems.</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="tushar-photo.jpg" alt="Photo of Tushar"> 
-                    <h3>Tushar A.</h3>
-                    <p>Lead Tech Developer</p>
-                    <p>Tushar is responsible for all the dynamic features of the site, including the live rankings, countdown timer, and theme toggle functionality.</p>
-                </div>
-                
-                <div class="team-member">
-                    <img src="govind-photo.jpg" alt="Photo of Govind"> 
-                    <h3>Govind P.</h3>
-                    <p>Community Manager & Content Creator</p>
-                    <p>Govind manages our social media channels, organizes community events, and creates the popular Pro Player Guides.</p>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="social-icons" style="margin-bottom: 10px;">
-            <a href="https://discord.gg/" target="_blank" aria-label="Join Discord"><i class="fab fa-discord"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Follow on Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        
-        <div class="contact-details">
-            <a href="mailto:contact@asbattleground.com">Email: contact@asbattleground.com</a>
-            |
-            <a href="tel:+919876543210">Call: +91-9876543210</a>
-        </div>
-        
-        <p>&copy; <span id="currentYear">2025</span> AS Battleground. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        // This function checks the saved theme from index.html (via Local Storage)
-        function checkSavedTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const body = document.body;
-            if (savedTheme === 'light') {
-                body.classList.add('light-mode');
-            }
-        }
-        
-        // This code sets the current year automatically (Dynamic Footer Year)
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentYear = new Date().getFullYear();
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                yearElement.textContent = currentYear;
-            }
-        });
-    </script>
-
-</body>
-    </html>
+        .light
