@@ -278,6 +278,7 @@ function acceptCookieConsent() {
 document.addEventListener('DOMContentLoaded', () => {
     // Set the current year for the copyright notice
     const currentYear = new Date().getFullYear();
+    // Is element ko dono files (index.html, about.html) mein use kiya gaya hai
     const yearElement = document.getElementById('currentYear');
     
     if (yearElement) {
